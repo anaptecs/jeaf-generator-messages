@@ -251,6 +251,22 @@ public final class ErrorCodes {
    * without a name then code generation is not possible.
    */
   public static final ErrorCode INPUT_PARAMS_WITHOUT_NAME;
+
+  /**
+   * When modelling methods also a return type is required not only for methods that really return something but also in
+   * case of "void". If a method does not define a return type then code generation is not possible.
+   */
+  public static final ErrorCode METHOD_WITHOUT_RETURN_TYPE;
+
+  /**
+   * When modelling method then they also have to have a name. Otherwise code generation is not possible.
+   */
+  public static final ErrorCode METHOD_WITHOUT_NAME;
+
+  /**
+   * All parameters within the UML model need to have a type. Otherwise code generation is not possible.
+   */
+  public static final ErrorCode PARAM_WITHOUT_TYPE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -301,6 +317,9 @@ public final class ErrorCodes {
     PROPERTY_WITHOUT_NAME = lRepository.getErrorCode(9125);
     INVALID_SERVICE_RETURN_TYPE = lRepository.getErrorCode(9126);
     INPUT_PARAMS_WITHOUT_NAME = lRepository.getErrorCode(9127);
+    METHOD_WITHOUT_RETURN_TYPE = lRepository.getErrorCode(9128);
+    METHOD_WITHOUT_NAME = lRepository.getErrorCode(9129);
+    PARAM_WITHOUT_TYPE = lRepository.getErrorCode(9130);
     // Handle all localized strings.
   }
 
