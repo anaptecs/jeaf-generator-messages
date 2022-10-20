@@ -119,6 +119,114 @@ public final class ErrorCodes {
    * lead to an invalid request / response from an OpenAPI perspective.
    */
   public static final ErrorCode INCOMAPTIBLE_TYPE_IN_BEAN_PARAM;
+
+  /**
+   * When defining the path of a REST resource then the path that is defined on the RESTResource (not RESTOperation)
+   * must start with a '/'
+   */
+  public static final ErrorCode INVALID_REST_RESOURCE_PATH;
+
+  /**
+   * The resource path of an "RESTOperation" is the combination of the path of the "RESTResource" and the
+   * "RESTOperation". However at least one of them has to be defined.
+   */
+  public static final ErrorCode NO_REST_RESOURCE_PATH;
+
+  /**
+   * The path of a "RESTOperation" must not start with '/'.
+   */
+  public static final ErrorCode INVALID_REST_OPERSTION_PATH;
+
+  /**
+   * Each "RESTOperation" must define at least one HTTP method. If this message occurs then you have to fix your UML
+   * Model.
+   */
+  public static final ErrorCode NO_HTTP_METHOD_DEFINED;
+
+  /**
+   * The "RESTOperation" uses a HTTP status code that is not compatible with JAX-RS standard.
+   */
+  public static final ErrorCode INVALID_HTTP_STATUS_CODE;
+
+  /**
+   * The supported consumed media types can either be defined on the "RESTResource" or on the "RESTOperation" but at
+   * least on one of them the information has to be defined.
+   */
+  public static final ErrorCode NO_CONSUMED_MEDIA_TYPE_DEFINED;
+
+  /**
+   * The produced media types can either be defined on the "RESTResource" or on the "RESTOperation" but at least on one
+   * of them the information has to be defined.
+   */
+  public static final ErrorCode NO_PRODUCED_MEDIA_TYPE_DEFINED;
+
+  /**
+   * All input paramaters of a "RESTOperation" have to have a name. Please fix the issue in your UML model.
+   */
+  public static final ErrorCode REST_INPUT_PARAM_WITHOUT_NAME;
+
+  /**
+   * All input paramaters that are not explicitly marked as "HeaderParam", "PathParam", "BeanParam" etc. are treated as
+   * body. However REST only supports one body per request. So please ensure that there is not more than 1 body per
+   * request.
+   */
+  public static final ErrorCode MULTIPLE_REQUEST_BODIES;
+
+  /**
+   * A "RESTOperation" defines a body paramater, however it's HTTP method does not allow to use a body.
+   */
+  public static final ErrorCode REQUEST_BODY_NOT_ALLOWED;
+
+  /**
+   * It's not allowed to have more than 1 global error reponse for an OpenAPI specification in an UML Model.
+   */
+  public static final ErrorCode MORE_THAN_ONE_GLOBAL_ERROR_RESPONSE;
+
+  /**
+   * "OpenAPIResponse" types need to define exactly one response type
+   */
+  public static final ErrorCode TO_MANY_OPEN_API_RESPONSE_TYPES;
+
+  /**
+   * "OpenAPIDataType" must have 1 property as long as they are not modeled as composite data types.
+   */
+  public static final ErrorCode OPEN_API_DATA_TYPE_TOO_MANY_PROPERTIES;
+
+  /**
+   * "OpenAPIDataType" must only have primitive types of properties, as long as they are not modeled as composite data
+   * types.
+   */
+  public static final ErrorCode OPEN_API_DATA_TYPE_ONLY_PRIMITIVES;
+
+  /**
+   * "OpenAPIDataType" must not have multivalued properties, as long as they are not modeled as composite data types.
+   */
+  public static final ErrorCode OPEN_API_DATA_TYPE_NO_MULTIVALUED_PROPERTIES;
+
+  /**
+   * "OpenAPIDataType" must not have parent classes.
+   */
+  public static final ErrorCode OPEN_API_DATA_TYPE_PARENT_NOT_SUPPORTED;
+
+  /**
+   * When defining a path param for a "RESTOperation" it is required that path paramaters are required.
+   */
+  public static final ErrorCode PATH_PARAM_MUST_BE_REQUIRED;
+
+  /**
+   * "PathParam" must not be defined as multivalued in the UML Model.
+   */
+  public static final ErrorCode PATH_PARAM_MUST_NOT_BE_MULTIVALUED;
+
+  /**
+   * It is strongly recommended that the elements of the UML model have a meaningful documentation ;-)
+   */
+  public static final ErrorCode DOCUMENTATION_MISSING;
+
+  /**
+   * When working with so called composite data types then inherhitance is not suppported for them.
+   */
+  public static final ErrorCode NO_PARENT_FOR_COMPOSITE_DATA_TYPES;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -145,6 +253,26 @@ public final class ErrorCodes {
     INCOMPATIBLE_OPENAPI_TYPE = lRepository.getErrorCode(9101);
     LOCAL_FILE_PATH_IN_XMI = lRepository.getErrorCode(9102);
     INCOMAPTIBLE_TYPE_IN_BEAN_PARAM = lRepository.getErrorCode(9103);
+    INVALID_REST_RESOURCE_PATH = lRepository.getErrorCode(9104);
+    NO_REST_RESOURCE_PATH = lRepository.getErrorCode(9105);
+    INVALID_REST_OPERSTION_PATH = lRepository.getErrorCode(9106);
+    NO_HTTP_METHOD_DEFINED = lRepository.getErrorCode(9107);
+    INVALID_HTTP_STATUS_CODE = lRepository.getErrorCode(9108);
+    NO_CONSUMED_MEDIA_TYPE_DEFINED = lRepository.getErrorCode(9109);
+    NO_PRODUCED_MEDIA_TYPE_DEFINED = lRepository.getErrorCode(9110);
+    REST_INPUT_PARAM_WITHOUT_NAME = lRepository.getErrorCode(9111);
+    MULTIPLE_REQUEST_BODIES = lRepository.getErrorCode(9112);
+    REQUEST_BODY_NOT_ALLOWED = lRepository.getErrorCode(9113);
+    MORE_THAN_ONE_GLOBAL_ERROR_RESPONSE = lRepository.getErrorCode(9114);
+    TO_MANY_OPEN_API_RESPONSE_TYPES = lRepository.getErrorCode(9115);
+    OPEN_API_DATA_TYPE_TOO_MANY_PROPERTIES = lRepository.getErrorCode(9116);
+    OPEN_API_DATA_TYPE_ONLY_PRIMITIVES = lRepository.getErrorCode(9117);
+    OPEN_API_DATA_TYPE_NO_MULTIVALUED_PROPERTIES = lRepository.getErrorCode(9118);
+    OPEN_API_DATA_TYPE_PARENT_NOT_SUPPORTED = lRepository.getErrorCode(9119);
+    PATH_PARAM_MUST_BE_REQUIRED = lRepository.getErrorCode(9120);
+    PATH_PARAM_MUST_NOT_BE_MULTIVALUED = lRepository.getErrorCode(9121);
+    DOCUMENTATION_MISSING = lRepository.getErrorCode(9122);
+    NO_PARENT_FOR_COMPOSITE_DATA_TYPES = lRepository.getErrorCode(9123);
     // Handle all localized strings.
   }
 
