@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent POM contains all general settings for building and releasing of all JEAF projects. -->
+	<parent>
+		<groupId>com.anaptecs.jeaf</groupId>
+		<artifactId>jeaf-plugin-project-parent</artifactId>
+		<version>1.0.39</version>
+	</parent>
+
+	<groupId>com.anaptecs.jeaf.generator</groupId>
+	<artifactId>jeaf-generator-messages-project</artifactId>
+	<version>1.6.63-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>JEAF Generator Messages Project</name>
+	<description>JEAF Generator Message contains all messages for JEAF Generator.</description>
+	<url>https://www.anaptecs.de/jeaf</url>
+
+	<scm>
+		<connection>scm:git:https://bitbucket.org/anaptecs/jeaf-generator-message.git</connection>
+		<developerConnection>scm:git:https://bitbucket.org/anaptecs/jeaf-generator-message.git</developerConnection>
+		<url>https://bitbucket.org/anaptecs/jeaf-generator-message</url>
+		<tag>HEAD</tag>
+	</scm>
+	
+	<properties>
+		<jeaf.x-fun.api.version>1.6.17</jeaf.x-fun.api.version>
+		<jeaf.x-fun.impl.version>1.6.23</jeaf.x-fun.impl.version>
+		<maven.jeaf-generator-plugin.version>1.6.61</maven.jeaf-generator-plugin.version>
+	</properties>
+
+	<modules>
+		<module>jeaf-generator-messages</module>
+	</modules>
+
+</project>
