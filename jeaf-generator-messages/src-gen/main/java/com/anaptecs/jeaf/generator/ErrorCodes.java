@@ -227,6 +227,18 @@ public final class ErrorCodes {
    * When working with so called composite data types then inherhitance is not suppported for them.
    */
   public static final ErrorCode NO_PARENT_FOR_COMPOSITE_DATA_TYPES;
+
+  /**
+   * When modelling attributes in UML it is important that they also have a type. If a type is not defined then code
+   * generation is not possible.
+   */
+  public static final ErrorCode ATTRIBUTE_WITHOUT_TYPE;
+
+  /**
+   * When modelling attributes and associations then it is reuiqred that they also have a type. If it is not defined
+   * then code generation is not possible.
+   */
+  public static final ErrorCode PROPERTY_WITHOUT_NAME;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -273,6 +285,8 @@ public final class ErrorCodes {
     PATH_PARAM_MUST_NOT_BE_MULTIVALUED = lRepository.getErrorCode(9121);
     DOCUMENTATION_MISSING = lRepository.getErrorCode(9122);
     NO_PARENT_FOR_COMPOSITE_DATA_TYPES = lRepository.getErrorCode(9123);
+    ATTRIBUTE_WITHOUT_TYPE = lRepository.getErrorCode(9124);
+    PROPERTY_WITHOUT_NAME = lRepository.getErrorCode(9125);
     // Handle all localized strings.
   }
 
