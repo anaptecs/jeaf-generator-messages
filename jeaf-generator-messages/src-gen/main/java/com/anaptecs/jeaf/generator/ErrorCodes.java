@@ -239,6 +239,18 @@ public final class ErrorCodes {
    * then code generation is not possible.
    */
   public static final ErrorCode PROPERTY_WITHOUT_NAME;
+
+  /**
+   * When modelling operations of services it is required that they also have a return type. Also case "void" has to be
+   * defined in UML Model. In addition multivalued primitive types are not supported as return types.
+   */
+  public static final ErrorCode INVALID_SERVICE_RETURN_TYPE;
+
+  /**
+   * When modelling parameters of operations it is reuiqred that they also have a name. If there are input parameters
+   * without a name then code generation is not possible.
+   */
+  public static final ErrorCode INPUT_PARAMS_WITHOUT_NAME;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -287,6 +299,8 @@ public final class ErrorCodes {
     NO_PARENT_FOR_COMPOSITE_DATA_TYPES = lRepository.getErrorCode(9123);
     ATTRIBUTE_WITHOUT_TYPE = lRepository.getErrorCode(9124);
     PROPERTY_WITHOUT_NAME = lRepository.getErrorCode(9125);
+    INVALID_SERVICE_RETURN_TYPE = lRepository.getErrorCode(9126);
+    INPUT_PARAMS_WITHOUT_NAME = lRepository.getErrorCode(9127);
     // Handle all localized strings.
   }
 
