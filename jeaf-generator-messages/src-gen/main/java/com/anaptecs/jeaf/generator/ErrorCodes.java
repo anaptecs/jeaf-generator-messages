@@ -294,6 +294,11 @@ public final class ErrorCodes {
    * name. Otherwise code generation is not possible.
    */
   public static final ErrorCode NO_ROLE_NAME_FOR_ASSOCIATION;
+
+  /**
+   * "ObjectMapping" is invalid according to the error message
+   */
+  public static final ErrorCode INVALID_OBJECT_MAPPING;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -352,6 +357,7 @@ public final class ErrorCodes {
     NO_VALID_CLASS_ID = lRepository.getErrorCode(9133);
     STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS = lRepository.getErrorCode(9134);
     NO_ROLE_NAME_FOR_ASSOCIATION = lRepository.getErrorCode(9135);
+    INVALID_OBJECT_MAPPING = lRepository.getErrorCode(9136);
     // Handle all localized strings.
   }
 
