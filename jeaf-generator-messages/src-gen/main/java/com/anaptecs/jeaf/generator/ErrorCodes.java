@@ -288,6 +288,12 @@ public final class ErrorCodes {
    * have applied stereotype "Role" or none of them.
    */
   public static final ErrorCode STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS;
+
+  /**
+   * When modelling associations between classes then it is required that navigable associations ends have set a role
+   * name. Otherwise code generation is not possible.
+   */
+  public static final ErrorCode NO_ROLE_NAME_FOR_ASSOCIATION;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -345,6 +351,7 @@ public final class ErrorCodes {
     NO_LAYER_DEFINED = lRepository.getErrorCode(9132);
     NO_VALID_CLASS_ID = lRepository.getErrorCode(9133);
     STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS = lRepository.getErrorCode(9134);
+    NO_ROLE_NAME_FOR_ASSOCIATION = lRepository.getErrorCode(9135);
     // Handle all localized strings.
   }
 
