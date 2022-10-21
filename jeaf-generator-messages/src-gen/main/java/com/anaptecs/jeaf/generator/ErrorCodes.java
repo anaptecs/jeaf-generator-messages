@@ -277,6 +277,17 @@ public final class ErrorCodes {
    * When modelling "JEAFComponents" you have to ensure that each component has defined a layer.
    */
   public static final ErrorCode NO_LAYER_DEFINED;
+
+  /**
+   * Class that are modelled as "PersistentObject" must have a so called "class id" with a value greater zero.
+   */
+  public static final ErrorCode NO_VALID_CLASS_ID;
+
+  /**
+   * When modelling persistent classes and their associations it is required that either both ends of an association
+   * have applied stereotype "Role" or none of them.
+   */
+  public static final ErrorCode STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -332,6 +343,8 @@ public final class ErrorCodes {
     PARAM_WITHOUT_TYPE = lRepository.getErrorCode(9130);
     ONLY_ONE_RETURN_PARAM_PER_ACTIVITY = lRepository.getErrorCode(9131);
     NO_LAYER_DEFINED = lRepository.getErrorCode(9132);
+    NO_VALID_CLASS_ID = lRepository.getErrorCode(9133);
+    STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS = lRepository.getErrorCode(9134);
     // Handle all localized strings.
   }
 
