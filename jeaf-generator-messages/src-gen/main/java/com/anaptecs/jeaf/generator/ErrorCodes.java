@@ -267,6 +267,16 @@ public final class ErrorCodes {
    * All parameters within the UML model need to have a type. Otherwise code generation is not possible.
    */
   public static final ErrorCode PARAM_WITHOUT_TYPE;
+
+  /**
+   * When modelling activities you have to ensure that each "JEAFActivity" does not have more than one return parameter.
+   */
+  public static final ErrorCode ONLY_ONE_RETURN_PARAM_PER_ACTIVITY;
+
+  /**
+   * When modelling "JEAFComponents" you have to ensure that each component has defined a layer.
+   */
+  public static final ErrorCode NO_LAYER_DEFINED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -320,6 +330,8 @@ public final class ErrorCodes {
     METHOD_WITHOUT_RETURN_TYPE = lRepository.getErrorCode(9128);
     METHOD_WITHOUT_NAME = lRepository.getErrorCode(9129);
     PARAM_WITHOUT_TYPE = lRepository.getErrorCode(9130);
+    ONLY_ONE_RETURN_PARAM_PER_ACTIVITY = lRepository.getErrorCode(9131);
+    NO_LAYER_DEFINED = lRepository.getErrorCode(9132);
     // Handle all localized strings.
   }
 
