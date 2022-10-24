@@ -18,10 +18,10 @@
 	<url>https://www.anaptecs.de/jeaf</url>
 
 	<scm>
-		<connection>scm:git:https://bitbucket.org/anaptecs/jeaf-generator-message.git</connection>
-		<developerConnection>scm:git:https://bitbucket.org/anaptecs/jeaf-generator-message.git</developerConnection>
-		<url>https://bitbucket.org/anaptecs/jeaf-generator-message</url>
-		<tag>jeaf-generator-messages-project-1.6.0</tag>
+		<connection>scm:git:https://bitbucket.org/anaptecs/jeaf-generator-messages.git</connection>
+		<developerConnection>scm:git:https://bitbucket.org/anaptecs/jeaf-generator-messages.git</developerConnection>
+		<url>https://bitbucket.org/anaptecs/jeaf-generator-messages</url>
+		<tag>HEAD</tag>
 	</scm>
 	
 	<properties>
