@@ -299,6 +299,82 @@ public final class ErrorCodes {
    * "ObjectMapping" is invalid according to the error message
    */
   public static final ErrorCode INVALID_OBJECT_MAPPING;
+
+  /**
+   * Minimum value for for Java Bean Validation "DecimalMin" is missing.
+   */
+  public static final ErrorCode DECIMAL_MIN_VALUE_MISSING;
+
+  /**
+   * For a specific Java Bean Validation a string-based or numeric target type is expected.
+   */
+  public static final ErrorCode WRONG_TARGET_TYPE_STRING_OR_NUMBER;
+
+  /**
+   * Maximum value for for Java Bean Validation "DecimalMax" is missing.
+   */
+  public static final ErrorCode DECIMAL_MAX_VALUE_MISSING;
+
+  /**
+   * For a specific Java Bean Validation a numeric target type is expected.
+   */
+  public static final ErrorCode WRONG_TARGET_TYPE_NUMBER;
+
+  /**
+   * When working with Java Bean Validation "Digit" then the integral and fractional digits have to be defined properly.
+   */
+  public static final ErrorCode WRONG_INTEGER_DIGITS;
+
+  /**
+   * When working with Java Bean Validation "Digits" then the integral and fractional digits have to be defined
+   * properly.
+   */
+  public static final ErrorCode WRONG_FRACTIONAL_DIGITS;
+
+  /**
+   * When working with Java Bean Validation "Size" then ist minimal size has to be set properly.
+   */
+  public static final ErrorCode INVALID_SIZE_MIN;
+
+  /**
+   * When working with Java Bean Validation "Size" then ist maximum size has to be set properly.
+   */
+  public static final ErrorCode INVALID_SIZE_MAX;
+
+  /**
+   * When working with Java Bean Validation "Size" maximum size has to be greater or equal to minimum size.
+   */
+  public static final ErrorCode INVALID_MAX_MIN_SIZE;
+
+  /**
+   * When working with Java Bean Validation "Size" then at least minimum or maximum size has to be set.
+   */
+  public static final ErrorCode EITHER_MIN_OR_MAX_HAS_TO_BE_SET;
+
+  /**
+   * For a specific Java Bean Validation a string, collection and map target type is expected.
+   */
+  public static final ErrorCode WRONG_TYPE_CHAR_OR_CONTAINER;
+
+  /**
+   * When working with Java Bean Validation "Pattern" then a regexp pattern has to be set.
+   */
+  public static final ErrorCode REGEXP_PATTERN_MISSING;
+
+  /**
+   * For a specific Java Bean Validation a string target type is expected.
+   */
+  public static final ErrorCode WRONG_TYPE_CHAR;
+
+  /**
+   * For a specific Java Bean Validation a boolean target type is expected.
+   */
+  public static final ErrorCode WRONG_TYPE_BOOLEAN;
+
+  /**
+   * For a specific Java Bean Validation a date target type is expected.
+   */
+  public static final ErrorCode WRONG_TYPE_DATE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -358,6 +434,21 @@ public final class ErrorCodes {
     STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS = lRepository.getErrorCode(9134);
     NO_ROLE_NAME_FOR_ASSOCIATION = lRepository.getErrorCode(9135);
     INVALID_OBJECT_MAPPING = lRepository.getErrorCode(9136);
+    DECIMAL_MIN_VALUE_MISSING = lRepository.getErrorCode(9137);
+    WRONG_TARGET_TYPE_STRING_OR_NUMBER = lRepository.getErrorCode(9138);
+    DECIMAL_MAX_VALUE_MISSING = lRepository.getErrorCode(9139);
+    WRONG_TARGET_TYPE_NUMBER = lRepository.getErrorCode(9140);
+    WRONG_INTEGER_DIGITS = lRepository.getErrorCode(9141);
+    WRONG_FRACTIONAL_DIGITS = lRepository.getErrorCode(9142);
+    INVALID_SIZE_MIN = lRepository.getErrorCode(9143);
+    INVALID_SIZE_MAX = lRepository.getErrorCode(9144);
+    INVALID_MAX_MIN_SIZE = lRepository.getErrorCode(9145);
+    EITHER_MIN_OR_MAX_HAS_TO_BE_SET = lRepository.getErrorCode(9146);
+    WRONG_TYPE_CHAR_OR_CONTAINER = lRepository.getErrorCode(9147);
+    REGEXP_PATTERN_MISSING = lRepository.getErrorCode(9148);
+    WRONG_TYPE_CHAR = lRepository.getErrorCode(9149);
+    WRONG_TYPE_BOOLEAN = lRepository.getErrorCode(9150);
+    WRONG_TYPE_DATE = lRepository.getErrorCode(9151);
     // Handle all localized strings.
   }
 
