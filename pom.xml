@@ -11,7 +11,7 @@
 
 	<groupId>com.anaptecs.jeaf.generator</groupId>
 	<artifactId>jeaf-generator-messages-project</artifactId>
-	<version>1.6.0</version>
+	<version>1.6.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>JEAF Generator Messages Project</name>
 	<description>JEAF Generator Message contains all messages for JEAF Generator.</description>
