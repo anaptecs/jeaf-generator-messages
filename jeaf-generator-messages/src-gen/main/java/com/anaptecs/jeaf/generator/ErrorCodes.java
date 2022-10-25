@@ -95,7 +95,7 @@ public final class ErrorCodes {
 
   /**
    * JEAF Generator expects a specific version of the so called JEAF Meta Model (JMM). The JMM version that is used by
-   * your UML Model seems to be outdated. Please upgrade to latest version of JMM.
+   * your UML model seems to be outdated. Please upgrade to latest version of JMM.
    */
   public static final ErrorCode INVALID_JMM;
 
@@ -107,114 +107,115 @@ public final class ErrorCodes {
   public static final ErrorCode INCOMPATIBLE_OPENAPI_TYPE;
 
   /**
-   * Depending on how you export XMI files from your MagicDraw model it might happen that the files contain information
-   * about file systems paths. This should not be an issue on the machine where you exported the files. However, it may
-   * lead to problems on other devices or your CI/CD infrastructure where file system paths might not be the same.
+   * Depending on how you export XMI files from your MagicDraw UML model, it might happen that the files contain
+   * information about file systems paths. This should not be an issue on the machine where you exported the files.
+   * However, it may lead to problems on other devices or your CI/CD infrastructure where file system paths might not be
+   * the same.
    */
   public static final ErrorCode LOCAL_FILE_PATH_IN_XMI;
 
   /**
    * When working with OpenAPI and REST there are some restrictions concerning the data types that can be used in Java.
-   * This warning tells you that in a defined "BeanParam" at least one property uses an incompatible type. This will
+   * This warning tells you that in a defined «BeanParam» at least one property uses an incompatible type. This will
    * lead to an invalid request / response from an OpenAPI perspective.
    */
   public static final ErrorCode INCOMAPTIBLE_TYPE_IN_BEAN_PARAM;
 
   /**
-   * When defining the path of a REST resource then the path that is defined on the RESTResource (not RESTOperation)
+   * When defining the path of a REST resource then the path that is defined on the «RESTResource» (not «RESTOperation»)
    * must start with a '/'
    */
   public static final ErrorCode INVALID_REST_RESOURCE_PATH;
 
   /**
-   * The resource path of an "RESTOperation" is the combination of the path of the "RESTResource" and the
-   * "RESTOperation". However at least one of them has to be defined.
+   * The resource path of an «RESTOperation» is the combination of the path of the «RESTResource» and the
+   * «RESTOperation». However at least one of them has to be defined.
    */
   public static final ErrorCode NO_REST_RESOURCE_PATH;
 
   /**
-   * The path of a "RESTOperation" must not start with '/'.
+   * The path of a «RESTOperation» must not start with '/'.
    */
   public static final ErrorCode INVALID_REST_OPERSTION_PATH;
 
   /**
-   * Each "RESTOperation" must define at least one HTTP method. If this message occurs then you have to fix your UML
-   * Model.
+   * Each «RESTOperation» must define at least one HTTP method. If this message occurs then you have to fix your UML
+   * model.
    */
   public static final ErrorCode NO_HTTP_METHOD_DEFINED;
 
   /**
-   * The "RESTOperation" uses a HTTP status code that is not compatible with JAX-RS standard.
+   * The «RESTOperation» uses a HTTP status code that is not compatible with JAX-RS standard.
    */
   public static final ErrorCode INVALID_HTTP_STATUS_CODE;
 
   /**
-   * The supported consumed media types can either be defined on the "RESTResource" or on the "RESTOperation" but at
+   * The supported consumed media types can either be defined on the «RESTResource» or on the «RESTOperation» but at
    * least on one of them the information has to be defined.
    */
   public static final ErrorCode NO_CONSUMED_MEDIA_TYPE_DEFINED;
 
   /**
-   * The produced media types can either be defined on the "RESTResource" or on the "RESTOperation" but at least on one
+   * The produced media types can either be defined on the «RESTResource» or on the «RESTOperation» but at least on one
    * of them the information has to be defined.
    */
   public static final ErrorCode NO_PRODUCED_MEDIA_TYPE_DEFINED;
 
   /**
-   * All input paramaters of a "RESTOperation" have to have a name. Please fix the issue in your UML model.
+   * All input paramaters of a «RESTOperation» must hava a name. Please fix the issue in your UML model.
    */
   public static final ErrorCode REST_INPUT_PARAM_WITHOUT_NAME;
 
   /**
-   * All input paramaters that are not explicitly marked as "HeaderParam", "PathParam", "BeanParam" etc. are treated as
+   * All input paramaters that are not explicitly marked as «HeaderParam», «PathParam», «BeanParam» etc. are treated as
    * body. However REST only supports one body per request. So please ensure that there is not more than 1 body per
    * request.
    */
   public static final ErrorCode MULTIPLE_REQUEST_BODIES;
 
   /**
-   * A "RESTOperation" defines a body paramater, however it's HTTP method does not allow to use a body.
+   * A «RESTOperation» defines a body paramater, however it's HTTP method does not allow to use a body.
    */
   public static final ErrorCode REQUEST_BODY_NOT_ALLOWED;
 
   /**
-   * It's not allowed to have more than 1 global error reponse for an OpenAPI specification in an UML Model.
+   * It's not allowed to have more than 1 global error reponse for an OpenAPI specification in an UML model.
    */
   public static final ErrorCode MORE_THAN_ONE_GLOBAL_ERROR_RESPONSE;
 
   /**
-   * "OpenAPIResponse" types need to define exactly one response type
+   * «OpenAPIResponse» types need to define exactly one response type
    */
   public static final ErrorCode TO_MANY_OPEN_API_RESPONSE_TYPES;
 
   /**
-   * "OpenAPIDataType" must have 1 property as long as they are not modeled as composite data types.
+   * «OpenAPIDataType» must have 1 property as long as they are not modeled as composite data types.
    */
   public static final ErrorCode OPEN_API_DATA_TYPE_TOO_MANY_PROPERTIES;
 
   /**
-   * "OpenAPIDataType" must only have primitive types of properties, as long as they are not modeled as composite data
+   * «OpenAPIDataType» must only have primitive types of properties, as long as they are not modeled as composite data
    * types.
    */
   public static final ErrorCode OPEN_API_DATA_TYPE_ONLY_PRIMITIVES;
 
   /**
-   * "OpenAPIDataType" must not have multivalued properties, as long as they are not modeled as composite data types.
+   * «OpenAPIDataType» must not have multivalued properties, as long as they are not modeled as composite data types.
    */
   public static final ErrorCode OPEN_API_DATA_TYPE_NO_MULTIVALUED_PROPERTIES;
 
   /**
-   * "OpenAPIDataType" must not have parent classes.
+   * «OpenAPIDataType» must not have parent classes.
    */
   public static final ErrorCode OPEN_API_DATA_TYPE_PARENT_NOT_SUPPORTED;
 
   /**
-   * When defining a path param for a "RESTOperation" it is required that path paramaters are required.
+   * When defining a path param for a «RESTOperation» it is required that path paramaters are required.
    */
   public static final ErrorCode PATH_PARAM_MUST_BE_REQUIRED;
 
   /**
-   * "PathParam" must not be defined as multivalued in the UML Model.
+   * «PathParam» must not be defined as multivalued in the UML model.
    */
   public static final ErrorCode PATH_PARAM_MUST_NOT_BE_MULTIVALUED;
 
@@ -229,37 +230,37 @@ public final class ErrorCodes {
   public static final ErrorCode NO_PARENT_FOR_COMPOSITE_DATA_TYPES;
 
   /**
-   * When modelling attributes in UML it is important that they also have a type. If a type is not defined then code
+   * When modeling attributes in UML it is important that they also have a type. If a type is not defined then code
    * generation is not possible.
    */
   public static final ErrorCode ATTRIBUTE_WITHOUT_TYPE;
 
   /**
-   * When modelling attributes and associations then it is reuiqred that they also have a type. If it is not defined
-   * then code generation is not possible.
+   * When modeling attributes and associations then it is reuiqred that they also have a type. If it is not defined then
+   * code generation is not possible.
    */
   public static final ErrorCode PROPERTY_WITHOUT_NAME;
 
   /**
-   * When modelling operations of services it is required that they also have a return type. Also case "void" has to be
-   * defined in UML Model. In addition multivalued primitive types are not supported as return types.
+   * When modeling operations of services it is required that they also have a return type. Also case "void" has to be
+   * defined in UML model. In addition multivalued primitive types are not supported as return types.
    */
   public static final ErrorCode INVALID_SERVICE_RETURN_TYPE;
 
   /**
-   * When modelling parameters of operations it is reuiqred that they also have a name. If there are input parameters
+   * When modeling parameters of operations it is reuiqred that they also have a name. If there are input parameters
    * without a name then code generation is not possible.
    */
   public static final ErrorCode INPUT_PARAMS_WITHOUT_NAME;
 
   /**
-   * When modelling methods also a return type is required not only for methods that really return something but also in
+   * When modeling methods also a return type is required not only for methods that really return something but also in
    * case of "void". If a method does not define a return type then code generation is not possible.
    */
   public static final ErrorCode METHOD_WITHOUT_RETURN_TYPE;
 
   /**
-   * When modelling method then they also have to have a name. Otherwise code generation is not possible.
+   * When modeling method then they also have to have a name. Otherwise code generation is not possible.
    */
   public static final ErrorCode METHOD_WITHOUT_NAME;
 
@@ -269,39 +270,39 @@ public final class ErrorCodes {
   public static final ErrorCode PARAM_WITHOUT_TYPE;
 
   /**
-   * When modelling activities you have to ensure that each "JEAFActivity" does not have more than one return parameter.
+   * When modeling activities you have to ensure that each «JEAFActivity» does not have more than one return parameter.
    */
   public static final ErrorCode ONLY_ONE_RETURN_PARAM_PER_ACTIVITY;
 
   /**
-   * When modelling "JEAFComponents" you have to ensure that each component has defined a layer.
+   * When modeling «JEAFComponents» you have to ensure that each component has defined a layer.
    */
   public static final ErrorCode NO_LAYER_DEFINED;
 
   /**
-   * Class that are modelled as "PersistentObject" must have a so called "class id" with a value greater zero.
+   * Class that are modeled as «PersistentObject» must have a so called "class id" with a value greater zero.
    */
   public static final ErrorCode NO_VALID_CLASS_ID;
 
   /**
-   * When modelling persistent classes and their associations it is required that either both ends of an association
-   * have applied stereotype "Role" or none of them.
+   * When modeling persistent classes and their associations it is required that either both ends of an association have
+   * applied stereotype «Role» or none of them.
    */
   public static final ErrorCode STEREOTYPE_ROLE_NOT_SET_ON_BOTH_ENDS;
 
   /**
-   * When modelling associations between classes then it is required that navigable associations ends have set a role
+   * When modeling associations between classes then it is required that navigable associations ends have set a role
    * name. Otherwise code generation is not possible.
    */
   public static final ErrorCode NO_ROLE_NAME_FOR_ASSOCIATION;
 
   /**
-   * "ObjectMapping" is invalid according to the error message
+   * «ObjectMapping» is invalid according to the error message
    */
   public static final ErrorCode INVALID_OBJECT_MAPPING;
 
   /**
-   * Minimum value for for Java Bean Validation "DecimalMin" is missing.
+   * Minimum value for for Java Bean Validation «DecimalMin» is missing.
    */
   public static final ErrorCode DECIMAL_MIN_VALUE_MISSING;
 
@@ -311,7 +312,7 @@ public final class ErrorCodes {
   public static final ErrorCode WRONG_TARGET_TYPE_STRING_OR_NUMBER;
 
   /**
-   * Maximum value for for Java Bean Validation "DecimalMax" is missing.
+   * Maximum value for for Java Bean Validation «DecimalMax» is missing.
    */
   public static final ErrorCode DECIMAL_MAX_VALUE_MISSING;
 
@@ -321,33 +322,33 @@ public final class ErrorCodes {
   public static final ErrorCode WRONG_TARGET_TYPE_NUMBER;
 
   /**
-   * When working with Java Bean Validation "Digit" then the integral and fractional digits have to be defined properly.
+   * When working with Java Bean Validation «Digit» then the integral and fractional digits have to be defined properly.
    */
   public static final ErrorCode WRONG_INTEGER_DIGITS;
 
   /**
-   * When working with Java Bean Validation "Digits" then the integral and fractional digits have to be defined
+   * When working with Java Bean Validation «Digits» then the integral and fractional digits have to be defined
    * properly.
    */
   public static final ErrorCode WRONG_FRACTIONAL_DIGITS;
 
   /**
-   * When working with Java Bean Validation "Size" then ist minimal size has to be set properly.
+   * When working with Java Bean Validation «Size» then ist minimal size has to be set properly.
    */
   public static final ErrorCode INVALID_SIZE_MIN;
 
   /**
-   * When working with Java Bean Validation "Size" then ist maximum size has to be set properly.
+   * When working with Java Bean Validation «Size» then ist maximum size has to be set properly.
    */
   public static final ErrorCode INVALID_SIZE_MAX;
 
   /**
-   * When working with Java Bean Validation "Size" maximum size has to be greater or equal to minimum size.
+   * When working with Java Bean Validation «Size» maximum size has to be greater or equal to minimum size.
    */
   public static final ErrorCode INVALID_MAX_MIN_SIZE;
 
   /**
-   * When working with Java Bean Validation "Size" then at least minimum or maximum size has to be set.
+   * When working with Java Bean Validation «Size» then at least minimum or maximum size has to be set.
    */
   public static final ErrorCode EITHER_MIN_OR_MAX_HAS_TO_BE_SET;
 
@@ -357,7 +358,7 @@ public final class ErrorCodes {
   public static final ErrorCode WRONG_TYPE_CHAR_OR_CONTAINER;
 
   /**
-   * When working with Java Bean Validation "Pattern" then a regexp pattern has to be set.
+   * When working with Java Bean Validation «Pattern» then a regexp pattern has to be set.
    */
   public static final ErrorCode REGEXP_PATTERN_MISSING;
 
