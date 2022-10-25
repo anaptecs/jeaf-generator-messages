@@ -162,24 +162,24 @@ public final class ErrorCodes {
   public static final ErrorCode NO_PRODUCED_MEDIA_TYPE_DEFINED;
 
   /**
-   * All input paramaters of a «RESTOperation» must hava a name. Please fix the issue in your UML model.
+   * All input parameters of a «RESTOperation» must have a name. Please fix the issue in your UML model.
    */
   public static final ErrorCode REST_INPUT_PARAM_WITHOUT_NAME;
 
   /**
-   * All input paramaters that are not explicitly marked as «HeaderParam», «PathParam», «BeanParam» etc. are treated as
+   * All input parameters that are not explicitly marked as «HeaderParam», «PathParam», «BeanParam» etc. are treated as
    * body. However REST only supports one body per request. So please ensure that there is not more than 1 body per
    * request.
    */
   public static final ErrorCode MULTIPLE_REQUEST_BODIES;
 
   /**
-   * A «RESTOperation» defines a body paramater, however it's HTTP method does not allow to use a body.
+   * A «RESTOperation» defines a body parameter, however it's HTTP method does not allow to use a body.
    */
   public static final ErrorCode REQUEST_BODY_NOT_ALLOWED;
 
   /**
-   * It's not allowed to have more than 1 global error reponse for an OpenAPI specification in an UML model.
+   * It's not allowed to have more than 1 global error response for an OpenAPI specification in an UML model.
    */
   public static final ErrorCode MORE_THAN_ONE_GLOBAL_ERROR_RESPONSE;
 
@@ -200,7 +200,7 @@ public final class ErrorCodes {
   public static final ErrorCode OPEN_API_DATA_TYPE_ONLY_PRIMITIVES;
 
   /**
-   * «OpenAPIDataType» must not have multivalued properties, as long as they are not modeled as composite data types.
+   * «OpenAPIDataType» must not have multi valued properties, as long as they are not modeled as composite data types.
    */
   public static final ErrorCode OPEN_API_DATA_TYPE_NO_MULTIVALUED_PROPERTIES;
 
@@ -210,12 +210,12 @@ public final class ErrorCodes {
   public static final ErrorCode OPEN_API_DATA_TYPE_PARENT_NOT_SUPPORTED;
 
   /**
-   * When defining a path param for a «RESTOperation» it is required that path paramaters are required.
+   * When defining a «PathParam» for a «RESTOperation» it is required that path parameters are required.
    */
   public static final ErrorCode PATH_PARAM_MUST_BE_REQUIRED;
 
   /**
-   * «PathParam» must not be defined as multivalued in the UML model.
+   * «PathParam» must not be defined as multi valued in the UML model.
    */
   public static final ErrorCode PATH_PARAM_MUST_NOT_BE_MULTIVALUED;
 
@@ -225,7 +225,7 @@ public final class ErrorCodes {
   public static final ErrorCode DOCUMENTATION_MISSING;
 
   /**
-   * When working with so called composite data types then inherhitance is not suppported for them.
+   * When working with so called composite data types then inheritance is not supported for them.
    */
   public static final ErrorCode NO_PARENT_FOR_COMPOSITE_DATA_TYPES;
 
@@ -236,19 +236,19 @@ public final class ErrorCodes {
   public static final ErrorCode ATTRIBUTE_WITHOUT_TYPE;
 
   /**
-   * When modeling attributes and associations then it is reuiqred that they also have a type. If it is not defined then
+   * When modeling attributes and associations then it is required that they also have a type. If it is not defined then
    * code generation is not possible.
    */
   public static final ErrorCode PROPERTY_WITHOUT_NAME;
 
   /**
    * When modeling operations of services it is required that they also have a return type. Also case "void" has to be
-   * defined in UML model. In addition multivalued primitive types are not supported as return types.
+   * defined in UML model. In addition multi valued primitive types are not supported as return types.
    */
   public static final ErrorCode INVALID_SERVICE_RETURN_TYPE;
 
   /**
-   * When modeling parameters of operations it is reuiqred that they also have a name. If there are input parameters
+   * When modeling parameters of operations it is required that they also have a name. If there are input parameters
    * without a name then code generation is not possible.
    */
   public static final ErrorCode INPUT_PARAMS_WITHOUT_NAME;
@@ -333,12 +333,12 @@ public final class ErrorCodes {
   public static final ErrorCode WRONG_FRACTIONAL_DIGITS;
 
   /**
-   * When working with Java Bean Validation «Size» then ist minimal size has to be set properly.
+   * When working with Java Bean Validation «Size» then its minimal size has to be set properly.
    */
   public static final ErrorCode INVALID_SIZE_MIN;
 
   /**
-   * When working with Java Bean Validation «Size» then ist maximum size has to be set properly.
+   * When working with Java Bean Validation «Size» then its maximum size has to be set properly.
    */
   public static final ErrorCode INVALID_SIZE_MAX;
 
