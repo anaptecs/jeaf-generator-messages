@@ -376,6 +376,13 @@ public final class ErrorCodes {
    * For a specific Java Bean Validation a date target type is expected.
    */
   public static final ErrorCode WRONG_TYPE_DATE;
+
+  /**
+   * Special stereotype «Ignore» can be used to explicitly exclude model elements from code generation. However this
+   * mechanism is intended to be a workaround / short term solution and not a permanent one ;-). Proper solution to this
+   * is to clean up your UML model. That's why a warning is shown during code generation.
+   */
+  public static final ErrorCode IGNORED_ELEMENT;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -450,6 +457,7 @@ public final class ErrorCodes {
     WRONG_TYPE_CHAR = lRepository.getErrorCode(9149);
     WRONG_TYPE_BOOLEAN = lRepository.getErrorCode(9150);
     WRONG_TYPE_DATE = lRepository.getErrorCode(9151);
+    IGNORED_ELEMENT = lRepository.getErrorCode(9152);
     // Handle all localized strings.
   }
 
