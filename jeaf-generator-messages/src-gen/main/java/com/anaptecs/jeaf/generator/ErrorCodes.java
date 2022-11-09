@@ -385,10 +385,10 @@ public final class ErrorCodes {
   public static final ErrorCode IGNORED_ELEMENT;
 
   /**
-   * OpenAPI standard defines that for whatever reason some header fileds should not be mentioned in the OpenAPI
+   * OpenAPI standard defines that for whatever reason some header fields should not be mentioned in the OpenAPI
    * specification e.g. ''Authorization'' header. However from an overall perspective it still might make sense to
    * explicitly model them e.g. if these fields are still required in Java code. Putting it all together in very most
-   * cases this warning can be ignored and is only generated to empahsis that these headers did not get "forgotten" in
+   * cases this warning can be ignored and is only generated to emphasis that these headers did not get "forgotten" in
    * generation of OpenAPI specification but are not added by intention. For further details please also refer to
    * https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameterObject
    */
