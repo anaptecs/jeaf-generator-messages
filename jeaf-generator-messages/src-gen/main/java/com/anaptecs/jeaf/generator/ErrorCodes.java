@@ -383,6 +383,16 @@ public final class ErrorCodes {
    * is to clean up your UML model. That's why a warning is shown during code generation.
    */
   public static final ErrorCode IGNORED_ELEMENT;
+
+  /**
+   * OpenAPI standard defines that for whatever reason some header fileds should not be mentioned in the OpenAPI
+   * specification e.g. ''Authorization'' header. However from an overall perspective it still might make sense to
+   * explicitly model them e.g. if these fields are still required in Java code. Putting it all together in very most
+   * cases this warning can be ignored and is only generated to empahsis that these headers did not get "forgotten" in
+   * generation of OpenAPI specification but are not added by intention. For further details please also refer to
+   * https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameterObject
+   */
+  public static final ErrorCode IGNOREABLE_OPEN_API_HEADER_FOUND;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -458,6 +468,7 @@ public final class ErrorCodes {
     WRONG_TYPE_BOOLEAN = lRepository.getErrorCode(9150);
     WRONG_TYPE_DATE = lRepository.getErrorCode(9151);
     IGNORED_ELEMENT = lRepository.getErrorCode(9152);
+    IGNOREABLE_OPEN_API_HEADER_FOUND = lRepository.getErrorCode(9153);
     // Handle all localized strings.
   }
 
