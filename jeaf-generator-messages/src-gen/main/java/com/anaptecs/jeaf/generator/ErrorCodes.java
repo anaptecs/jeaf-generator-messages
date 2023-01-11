@@ -327,8 +327,7 @@ public final class ErrorCodes {
   public static final ErrorCode WRONG_INTEGER_DIGITS;
 
   /**
-   * When working with Java Bean Validation «Digits» then the integral and fractional digits have to be defined
-   * properly.
+   * When working with Java Bean Validation «Digit» then the integral and fractional digits have to be defined properly.
    */
   public static final ErrorCode WRONG_FRACTIONAL_DIGITS;
 
@@ -393,6 +392,18 @@ public final class ErrorCodes {
    * https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.3.md#parameterObject
    */
   public static final ErrorCode IGNOREABLE_OPEN_API_HEADER_FOUND;
+
+  /**
+   * JEAF Generator supports to mark various elements in the UML model as deprecated. This information is also added to
+   * the generated code and OpenAPI specification. However, there are cases where OpenAPI does not allow to mark an
+   * element as deprecated. Namely this is the case for single valued references to other complex types like a 0..1
+   * association to another object. In this case the generated Java code will still contain the deprecation but the
+   * OpenAPI specification will not have "deprecation: true". Instead only as comment inside the file is created.
+   * 
+   * Example: - # Property "xyz" is marked as deprecated. However OpenAPI does not support to mark references to complex
+   * types as deprecated.
+   */
+  public static final ErrorCode DEPRECATION_MARKING_NOT_ALLOWED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -469,6 +480,7 @@ public final class ErrorCodes {
     WRONG_TYPE_DATE = lRepository.getErrorCode(9151);
     IGNORED_ELEMENT = lRepository.getErrorCode(9152);
     IGNOREABLE_OPEN_API_HEADER_FOUND = lRepository.getErrorCode(9153);
+    DEPRECATION_MARKING_NOT_ALLOWED = lRepository.getErrorCode(9154);
     // Handle all localized strings.
   }
 
