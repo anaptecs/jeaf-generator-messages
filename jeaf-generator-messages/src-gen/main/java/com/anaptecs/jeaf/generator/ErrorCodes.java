@@ -404,6 +404,20 @@ public final class ErrorCodes {
    * types as deprecated.
    */
   public static final ErrorCode DEPRECATION_MARKING_NOT_ALLOWED;
+
+  /**
+   * JAX-RS specification only allows to use java.util.List, java.util.Set or java.util.SortedSet for header params but
+   * not java.util.Collection. Please fix your UML model so that either List, Set or SortedSet is used for multi valued
+   * header fields.
+   */
+  public static final ErrorCode COLLECTION_HEADER_PARAM_NOT_SUPPORTED;
+
+  /**
+   * JAX-RS specification only allows to use java.util.List, java.util.Set or java.util.SortedSet for query params but
+   * not java.util.Collection. Please fix your UML model so that either List, Set or SortedSet is used for multi valued
+   * query params.
+   */
+  public static final ErrorCode COLLECTION_QUERY_PARAM_NOT_SUPPORTED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -481,6 +495,8 @@ public final class ErrorCodes {
     IGNORED_ELEMENT = lRepository.getErrorCode(9152);
     IGNOREABLE_OPEN_API_HEADER_FOUND = lRepository.getErrorCode(9153);
     DEPRECATION_MARKING_NOT_ALLOWED = lRepository.getErrorCode(9154);
+    COLLECTION_HEADER_PARAM_NOT_SUPPORTED = lRepository.getErrorCode(9155);
+    COLLECTION_QUERY_PARAM_NOT_SUPPORTED = lRepository.getErrorCode(9156);
     // Handle all localized strings.
   }
 
