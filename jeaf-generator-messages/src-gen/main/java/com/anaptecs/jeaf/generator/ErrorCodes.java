@@ -418,6 +418,21 @@ public final class ErrorCodes {
    * query params.
    */
   public static final ErrorCode COLLECTION_QUERY_PARAM_NOT_SUPPORTED;
+
+  /**
+   * JEAF Generator supports to also make the public representation of a composite data type visible internally. To do
+   * so, a property has to be marked with stereotype «CompositeDataTypePublicField». In addition it is required that the
+   * property is of type String.
+   */
+  public static final ErrorCode COMPOSITE_DATA_TYPE_PUBLIC_FIELD_MUST_BE_STRING;
+
+  /**
+   * JEAF Generator supports so called soft links. They can be used to modularize your model without loosing information
+   * about real types. One possibility when using soft links is to use so called custom generic soft links. In this case
+   * you can define your own type that should be used to represent the soft link association. This type, however has to
+   * be configured in JEAF Generator Maven Plugin.
+   */
+  public static final ErrorCode CUSTOM_GENERIC_TYPE_NOT_CONFIGURED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -497,6 +512,8 @@ public final class ErrorCodes {
     DEPRECATION_MARKING_NOT_ALLOWED = lRepository.getErrorCode(9154);
     COLLECTION_HEADER_PARAM_NOT_SUPPORTED = lRepository.getErrorCode(9155);
     COLLECTION_QUERY_PARAM_NOT_SUPPORTED = lRepository.getErrorCode(9156);
+    COMPOSITE_DATA_TYPE_PUBLIC_FIELD_MUST_BE_STRING = lRepository.getErrorCode(9157);
+    CUSTOM_GENERIC_TYPE_NOT_CONFIGURED = lRepository.getErrorCode(9158);
     // Handle all localized strings.
   }
 
