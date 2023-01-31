@@ -439,6 +439,12 @@ public final class ErrorCodes {
    * types. For OpenAPI Data Types it is strongly recommended that they are immutable.
    */
   public static final ErrorCode OPEN_API_DATA_TYPE_NOT_IMMUTABLE;
+
+  /**
+   * And model element can either be marked with stereotype «POJO» or «ServiceObject» but not both of them a teh same
+   * time.
+   */
+  public static final ErrorCode EITHER_POJO_OR_SERVICE_OBJECT;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -521,6 +527,7 @@ public final class ErrorCodes {
     COMPOSITE_DATA_TYPE_PUBLIC_FIELD_MUST_BE_STRING = lRepository.getErrorCode(9157);
     CUSTOM_GENERIC_TYPE_NOT_CONFIGURED = lRepository.getErrorCode(9158);
     OPEN_API_DATA_TYPE_NOT_IMMUTABLE = lRepository.getErrorCode(9159);
+    EITHER_POJO_OR_SERVICE_OBJECT = lRepository.getErrorCode(9160);
     // Handle all localized strings.
   }
 
