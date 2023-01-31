@@ -433,6 +433,12 @@ public final class ErrorCodes {
    * be configured in JEAF Generator Maven Plugin.
    */
   public static final ErrorCode CUSTOM_GENERIC_TYPE_NOT_CONFIGURED;
+
+  /**
+   * JEAF Generator supports so called OpenAPI Data Types. They can be used a strong type representation for basic
+   * types. For OpenAPI Data Types it is strongly recommended that they are immutable.
+   */
+  public static final ErrorCode OPEN_API_DATA_TYPE_NOT_IMMUTABLE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -514,6 +520,7 @@ public final class ErrorCodes {
     COLLECTION_QUERY_PARAM_NOT_SUPPORTED = lRepository.getErrorCode(9156);
     COMPOSITE_DATA_TYPE_PUBLIC_FIELD_MUST_BE_STRING = lRepository.getErrorCode(9157);
     CUSTOM_GENERIC_TYPE_NOT_CONFIGURED = lRepository.getErrorCode(9158);
+    OPEN_API_DATA_TYPE_NOT_IMMUTABLE = lRepository.getErrorCode(9159);
     // Handle all localized strings.
   }
 
