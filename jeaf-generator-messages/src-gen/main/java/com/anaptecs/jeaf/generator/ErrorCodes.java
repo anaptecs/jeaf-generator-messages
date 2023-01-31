@@ -441,7 +441,7 @@ public final class ErrorCodes {
   public static final ErrorCode OPEN_API_DATA_TYPE_NOT_IMMUTABLE;
 
   /**
-   * And model element can either be marked with stereotype «POJO» or «ServiceObject» but not both of them a teh same
+   * And model element can either be marked with stereotype «POJO» or «ServiceObject» but not both of them a the same
    * time.
    */
   public static final ErrorCode EITHER_POJO_OR_SERVICE_OBJECT;
