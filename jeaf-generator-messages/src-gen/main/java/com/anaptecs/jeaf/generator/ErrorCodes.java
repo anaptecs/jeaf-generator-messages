@@ -445,6 +445,12 @@ public final class ErrorCodes {
    * time.
    */
   public static final ErrorCode EITHER_POJO_OR_SERVICE_OBJECT;
+
+  /**
+   * If a model element is marked as deprecated also a description, a "since" flag and the planned removal date of the
+   * deprecation should be provided so that consumers of the classes, services etc. can prepare.
+   */
+  public static final ErrorCode INCOMPLETE_DEPRECATION;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -528,6 +534,7 @@ public final class ErrorCodes {
     CUSTOM_GENERIC_TYPE_NOT_CONFIGURED = lRepository.getErrorCode(9158);
     OPEN_API_DATA_TYPE_NOT_IMMUTABLE = lRepository.getErrorCode(9159);
     EITHER_POJO_OR_SERVICE_OBJECT = lRepository.getErrorCode(9160);
+    INCOMPLETE_DEPRECATION = lRepository.getErrorCode(9161);
     // Handle all localized strings.
   }
 
