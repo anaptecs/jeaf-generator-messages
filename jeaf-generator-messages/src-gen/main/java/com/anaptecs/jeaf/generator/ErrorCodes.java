@@ -451,6 +451,12 @@ public final class ErrorCodes {
    * deprecation should be provided so that consumers of the classes, services etc. can prepare.
    */
   public static final ErrorCode INCOMPLETE_DEPRECATION;
+
+  /**
+   * If a model element is marked as composite data type then a name for the public field representation is required to
+   * be set in the model.
+   */
+  public static final ErrorCode NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -535,6 +541,7 @@ public final class ErrorCodes {
     OPEN_API_DATA_TYPE_NOT_IMMUTABLE = lRepository.getErrorCode(9159);
     EITHER_POJO_OR_SERVICE_OBJECT = lRepository.getErrorCode(9160);
     INCOMPLETE_DEPRECATION = lRepository.getErrorCode(9161);
+    NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE = lRepository.getErrorCode(9162);
     // Handle all localized strings.
   }
 
