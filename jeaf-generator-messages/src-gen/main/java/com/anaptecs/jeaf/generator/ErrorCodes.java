@@ -464,6 +464,12 @@ public final class ErrorCodes {
    * class then it has to be implemented manually.
    */
   public static final ErrorCode NO_EQUALS_FOR_BIDIRECTIONAL_ASSOCIATIONS;
+
+  /**
+   * JEAF Generator supports so called soft links. They can be used to modularize and decouple your application. Due to
+   * that it does not make sense to use them in combination with bidirectional associations.
+   */
+  public static final ErrorCode SOFTLINK_FOR_BIDIRECTIONAL_ASSOCIATION_NOT_SUPPORTED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -550,6 +556,7 @@ public final class ErrorCodes {
     INCOMPLETE_DEPRECATION = lRepository.getErrorCode(9161);
     NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE = lRepository.getErrorCode(9162);
     NO_EQUALS_FOR_BIDIRECTIONAL_ASSOCIATIONS = lRepository.getErrorCode(9163);
+    SOFTLINK_FOR_BIDIRECTIONAL_ASSOCIATION_NOT_SUPPORTED = lRepository.getErrorCode(9164);
     // Handle all localized strings.
   }
 
