@@ -399,7 +399,7 @@ public final class ErrorCodes {
    * element as deprecated. Namely this is the case for single valued references to other complex types like a 0..1
    * association to another object. In this case the generated Java code will still contain the deprecation but the
    * OpenAPI specification will not have "deprecation: true". Instead only as comment inside the file is created.
-   * 
+   *
    * Example: - # Property "xyz" is marked as deprecated. However OpenAPI does not support to mark references to complex
    * types as deprecated.
    */
@@ -457,6 +457,13 @@ public final class ErrorCodes {
    * be set in the model.
    */
   public static final ErrorCode NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE;
+
+  /**
+   * In case that a class has one or more bidirectional associations ist not possible to generate equals() and
+   * hashCode() as it requires some business knowledege to do so. If equals() and hashCode() are required for such a
+   * class then it has to be implemented manually.
+   */
+  public static final ErrorCode NO_EQUALS_FOR_BIDIRECTIONAL_ASSOCIATIONS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -542,6 +549,7 @@ public final class ErrorCodes {
     EITHER_POJO_OR_SERVICE_OBJECT = lRepository.getErrorCode(9160);
     INCOMPLETE_DEPRECATION = lRepository.getErrorCode(9161);
     NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE = lRepository.getErrorCode(9162);
+    NO_EQUALS_FOR_BIDIRECTIONAL_ASSOCIATIONS = lRepository.getErrorCode(9163);
     // Handle all localized strings.
   }
 
