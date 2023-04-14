@@ -459,8 +459,8 @@ public final class ErrorCodes {
   public static final ErrorCode NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE;
 
   /**
-   * In case that a class has one or more bidirectional associations ist not possible to generate equals() and
-   * hashCode() as it requires some business knowledege to do so. If equals() and hashCode() are required for such a
+   * In case that a class has one or more bidirectional associations it is not possible to generate equals() and
+   * hashCode() as it requires some business knowledge to do so. If equals() and hashCode() are required for such a
    * class then it has to be implemented manually.
    */
   public static final ErrorCode NO_EQUALS_FOR_BIDIRECTIONAL_ASSOCIATIONS;
