@@ -470,6 +470,17 @@ public final class ErrorCodes {
    * that it does not make sense to use them in combination with bidirectional associations.
    */
   public static final ErrorCode SOFTLINK_FOR_BIDIRECTIONAL_ASSOCIATION_NOT_SUPPORTED;
+
+  /**
+   * A REST operation path defines one or more path params but not all of them are also present as parameters in the
+   * defined REST operation
+   */
+  public static final ErrorCode PATH_PARAMS_MISSING;
+
+  /**
+   * A REST operation defines path parameters that are not defined on the operations paths as parameters
+   */
+  public static final ErrorCode DEAD_PATH_PARAMS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -557,6 +568,8 @@ public final class ErrorCodes {
     NO_PUBLIC_FIELD_NAME_FOR_COMPOSITE_DATA_TYPE = lRepository.getErrorCode(9162);
     NO_EQUALS_FOR_BIDIRECTIONAL_ASSOCIATIONS = lRepository.getErrorCode(9163);
     SOFTLINK_FOR_BIDIRECTIONAL_ASSOCIATION_NOT_SUPPORTED = lRepository.getErrorCode(9164);
+    PATH_PARAMS_MISSING = lRepository.getErrorCode(9165);
+    DEAD_PATH_PARAMS = lRepository.getErrorCode(9166);
     // Handle all localized strings.
   }
 
