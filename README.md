@@ -10,8 +10,10 @@ This repository contains the messages for JEAF Generator.
 ## Links ##
 For further information please refer to our documentation:
 
-* [JEAF Generator](https://anaptecs.atlassian.net/l/cp/roLu4d09)
-* [JEAF Modelling Guide](https://anaptecs.atlassian.net/l/c/1B2ci31g)
+* [JEAF Generator](https://www.jeaf-generator.io/)
+* [UML Modeling Guide](https://www.jeaf-generator.io/uml-modeling-guide/)
+* [Developer Guide](https://www.jeaf-generator.io/developer-guide/)
+* [Quickstart Guide](https://www.jeaf-generator.io/developer-guide/quickstart/)
 
 ## How do I get set up? ##
 
