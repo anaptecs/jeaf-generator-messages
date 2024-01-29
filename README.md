@@ -1,4 +1,4 @@
-![Latest Version](https://maven-badges.herokuapp.com/maven-central/com.anaptecs.jeaf.generator/jeaf-generator-message-project/badge.svg)
+![Latest Version](https://maven-badges.herokuapp.com/maven-central/com.anaptecs.jeaf.generator/jeaf-generator-messages/badge.svg)
 
 
 
