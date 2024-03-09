@@ -481,6 +481,20 @@ public final class ErrorCodes {
    * A REST operation defines path parameters that are not defined on the operations paths as parameters
    */
   public static final ErrorCode DEAD_PATH_PARAMS;
+
+  /**
+   * JEAF Generator supports usage of so called Template Bindings in UML which are an equivalent to generics in Java. If
+   * a class makes usage of such a template binding then also a parameter subsitution has to be defined in the UML
+   * model.
+   */
+  public static final ErrorCode INVALID_TEMPLATE_BINDING_NO_SUBST;
+
+  /**
+   * JEAF Generator supports usage of so called Template Bindings in UML which are an equivalent to generics in Java.
+   * Howver in UML it is possible to define more than one template binding per class. This is currently not supported by
+   * JEAF Generator.
+   */
+  public static final ErrorCode TOO_MANY_TEMPLATE_BINDINGS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -570,6 +584,8 @@ public final class ErrorCodes {
     SOFTLINK_FOR_BIDIRECTIONAL_ASSOCIATION_NOT_SUPPORTED = lRepository.getErrorCode(9164);
     PATH_PARAMS_MISSING = lRepository.getErrorCode(9165);
     DEAD_PATH_PARAMS = lRepository.getErrorCode(9166);
+    INVALID_TEMPLATE_BINDING_NO_SUBST = lRepository.getErrorCode(9167);
+    TOO_MANY_TEMPLATE_BINDINGS = lRepository.getErrorCode(9168);
     // Handle all localized strings.
   }
 
