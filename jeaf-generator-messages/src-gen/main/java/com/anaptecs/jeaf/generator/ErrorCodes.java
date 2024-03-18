@@ -497,8 +497,8 @@ public final class ErrorCodes {
   public static final ErrorCode TOO_MANY_TEMPLATE_BINDINGS;
 
   /**
-   * Enumeration might have mandatory properties without default values. If an enumeration literal is defined in the UML
-   * model and not all mandatory properties without default value are set then this error message will be used.
+   * Enumerations might have mandatory properties without default values. If an enumeration literal is defined in the
+   * UML model and not all mandatory properties without default value are set, then this error message will be used.
    */
   public static final ErrorCode MANDATORY_ENUM_PROPERTIES_NOT_SET;
   /**
