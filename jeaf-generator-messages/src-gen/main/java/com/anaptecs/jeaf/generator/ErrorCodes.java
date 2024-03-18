@@ -495,6 +495,12 @@ public final class ErrorCodes {
    * JEAF Generator.
    */
   public static final ErrorCode TOO_MANY_TEMPLATE_BINDINGS;
+
+  /**
+   * Enumeration might have mandatory properties without default values. If an enumeration literal is defined in the UML
+   * model and not all mandatory properties without default value are set then this error message will be used.
+   */
+  public static final ErrorCode MANDATORY_ENUM_PROPERTIES_NOT_SET;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -586,6 +592,7 @@ public final class ErrorCodes {
     DEAD_PATH_PARAMS = lRepository.getErrorCode(9166);
     INVALID_TEMPLATE_BINDING_NO_SUBST = lRepository.getErrorCode(9167);
     TOO_MANY_TEMPLATE_BINDINGS = lRepository.getErrorCode(9168);
+    MANDATORY_ENUM_PROPERTIES_NOT_SET = lRepository.getErrorCode(9169);
     // Handle all localized strings.
   }
 
