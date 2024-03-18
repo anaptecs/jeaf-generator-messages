@@ -484,15 +484,15 @@ public final class ErrorCodes {
 
   /**
    * JEAF Generator supports usage of so called Template Bindings in UML which are an equivalent to generics in Java. If
-   * a class makes usage of such a template binding then also a parameter subsitution has to be defined in the UML
+   * a class makes usage of such a template binding then also a parameter substitution has to be defined in the UML
    * model.
    */
   public static final ErrorCode INVALID_TEMPLATE_BINDING_NO_SUBST;
 
   /**
    * JEAF Generator supports usage of so called Template Bindings in UML which are an equivalent to generics in Java.
-   * Howver in UML it is possible to define more than one template binding per class. This is currently not supported by
-   * JEAF Generator.
+   * However in UML it is possible to define more than one template binding per class. This is currently not supported
+   * by JEAF Generator.
    */
   public static final ErrorCode TOO_MANY_TEMPLATE_BINDINGS;
 
