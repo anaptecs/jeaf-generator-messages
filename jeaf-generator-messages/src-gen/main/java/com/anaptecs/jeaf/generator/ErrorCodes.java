@@ -501,6 +501,12 @@ public final class ErrorCodes {
    * UML model and not all mandatory properties without default value are set, then this error message will be used.
    */
   public static final ErrorCode MANDATORY_ENUM_PROPERTIES_NOT_SET;
+
+  /**
+   * Names of classes, enumerations, properties, parameters and operations must match to regular expression according to
+   * Java Language Specification.
+   */
+  public static final ErrorCode INVALID_IDENTIFIER_NAME;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -593,6 +599,7 @@ public final class ErrorCodes {
     INVALID_TEMPLATE_BINDING_NO_SUBST = lRepository.getErrorCode(9167);
     TOO_MANY_TEMPLATE_BINDINGS = lRepository.getErrorCode(9168);
     MANDATORY_ENUM_PROPERTIES_NOT_SET = lRepository.getErrorCode(9169);
+    INVALID_IDENTIFIER_NAME = lRepository.getErrorCode(9170);
     // Handle all localized strings.
   }
 
