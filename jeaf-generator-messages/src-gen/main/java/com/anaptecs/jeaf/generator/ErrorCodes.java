@@ -507,6 +507,20 @@ public final class ErrorCodes {
    * Java Language Specification.
    */
   public static final ErrorCode INVALID_IDENTIFIER_NAME;
+
+  /**
+   * JEAF Generator supports to split a model into several OpenAPI specifications. If in such a case one OpenAPI
+   * specification refers to the types of another one then a dependency between OpenAPI specs has to be defined in the
+   * model.
+   */
+  public static final ErrorCode OPEN_API_SPEC_REFERENCE_MISSING;
+
+  /**
+   * When working with OpenAPI specifications then all complex types that are used must belong either to the same or
+   * another OpenAPI specification. Please make sure that OpenAPI types only use basic types or other OpenAPI types that
+   * belong to an OpenAPI specification (same or referenced one).
+   */
+  public static final ErrorCode ORPHANED_OPEN_API_TYPE_USED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -600,6 +614,8 @@ public final class ErrorCodes {
     TOO_MANY_TEMPLATE_BINDINGS = lRepository.getErrorCode(9168);
     MANDATORY_ENUM_PROPERTIES_NOT_SET = lRepository.getErrorCode(9169);
     INVALID_IDENTIFIER_NAME = lRepository.getErrorCode(9170);
+    OPEN_API_SPEC_REFERENCE_MISSING = lRepository.getErrorCode(9171);
+    ORPHANED_OPEN_API_TYPE_USED = lRepository.getErrorCode(9172);
     // Handle all localized strings.
   }
 
