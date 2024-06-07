@@ -510,15 +510,15 @@ public final class ErrorCodes {
 
   /**
    * JEAF Generator supports to split a model into several OpenAPI specifications. If in such a case one OpenAPI
-   * specification refers to the types of another one then a dependency between OpenAPI specs has to be defined in the
-   * model.
+   * specification refers to the types of another one, then a dependency between OpenAPI specs has to be defined in the
+   * UML model.
    */
   public static final ErrorCode OPEN_API_SPEC_REFERENCE_MISSING;
 
   /**
-   * When working with OpenAPI specifications then all complex types that are used must belong either to the same or
-   * another OpenAPI specification. Please make sure that OpenAPI types only use basic types or other OpenAPI types that
-   * belong to an OpenAPI specification (same or referenced one).
+   * When working with OpenAPI specifications then all complex types that are used must belong to an OpenAPI
+   * specification. Please make sure that OpenAPI types only use basic types or other OpenAPI types that belong to an
+   * OpenAPI specification (same or referenced one).
    */
   public static final ErrorCode ORPHANED_OPEN_API_TYPE_USED;
   /**
