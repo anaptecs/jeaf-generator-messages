@@ -521,6 +521,27 @@ public final class ErrorCodes {
    * OpenAPI specification (same or referenced one).
    */
   public static final ErrorCode ORPHANED_OPEN_API_TYPE_USED;
+
+  /**
+   * JEAF Generator support developers with special code generation for backward compatibility for Java properties. Due
+   * to that tagged value ''generateBackwardCompatibility'' and ''successorName'' of stereotype «JEAFDeprecated» can
+   * only be used for properties.
+   */
+  public static final ErrorCode BACKWARD_COMPATIBILITY_ONLY_APPLICABLE_FOR_PROPERTIES;
+
+  /**
+   * JEAF Generator support developers with special code generation for backward compatibility for Java properties.
+   * Therefor it is possible to define the successor of an already existing property. The name of the successor must
+   * match to a real property of the same class.
+   */
+  public static final ErrorCode SUCCESSOR_DOES_NOT_EXIST;
+
+  /**
+   * JEAF Generator support developers with special code generation for backward compatibility for Java properties.
+   * Therefor it is possible to define the successor of an already existing property. The name of the successor must be
+   * set.
+   */
+  public static final ErrorCode SUCCESSOR_NOT_SET;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -616,6 +637,9 @@ public final class ErrorCodes {
     INVALID_IDENTIFIER_NAME = lRepository.getErrorCode(9170);
     OPEN_API_SPEC_REFERENCE_MISSING = lRepository.getErrorCode(9171);
     ORPHANED_OPEN_API_TYPE_USED = lRepository.getErrorCode(9172);
+    BACKWARD_COMPATIBILITY_ONLY_APPLICABLE_FOR_PROPERTIES = lRepository.getErrorCode(9173);
+    SUCCESSOR_DOES_NOT_EXIST = lRepository.getErrorCode(9174);
+    SUCCESSOR_NOT_SET = lRepository.getErrorCode(9175);
     // Handle all localized strings.
   }
 
