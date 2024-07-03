@@ -531,23 +531,22 @@ public final class ErrorCodes {
 
   /**
    * JEAF Generator support developers with special code generation for backward compatibility for Java properties.
-   * Therefor it is possible to define the successor of an already existing property. The name of the successor must
+   * Therefore it is possible to define the successor of an already existing property. The name of the successor must
    * match to a real property of the same class.
    */
   public static final ErrorCode SUCCESSOR_DOES_NOT_EXIST;
 
   /**
    * JEAF Generator support developers with special code generation for backward compatibility for Java properties.
-   * Therefor it is possible to define the successor of an already existing property. The name of the successor must be
+   * Therefore it is possible to define the successor of an already existing property. The name of the successor must be
    * set.
    */
   public static final ErrorCode SUCCESSOR_NOT_SET;
 
   /**
    * JEAF Generator supports to generate NotNull / NotEmpty annotations based on the UML model information for
-   * properties and parameter. However, in Java there is no really default which annotatrion to use. So, JEAF Generator
-   * explicitly expects that the name of the annotation that should be used is explicitly defined in the Maven
-   * configuration.
+   * properties and parameters. However, in Java there is no really default which annotatrion to use. So, JEAF Generator
+   * explicitly expects that the name of the annotation that should be used is defined in the Maven configuration.
    */
   public static final ErrorCode NOT_NULL_ANNOTATION_NAME_NOT_SET;
   /**
