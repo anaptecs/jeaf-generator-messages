@@ -542,6 +542,14 @@ public final class ErrorCodes {
    * set.
    */
   public static final ErrorCode SUCCESSOR_NOT_SET;
+
+  /**
+   * JEAF Generator supports to generate NotNull / NotEmpty annotations based on the UML model information for
+   * properties and parameter. However, in Java there is no really default which annotatrion to use. So, JEAF Generator
+   * explicitly expects that the name of the annotation that should be used is explicitly defined in the Maven
+   * configuration.
+   */
+  public static final ErrorCode NOT_NULL_ANNOTATION_NAME_NOT_SET;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -640,6 +648,7 @@ public final class ErrorCodes {
     BACKWARD_COMPATIBILITY_ONLY_APPLICABLE_FOR_PROPERTIES = lRepository.getErrorCode(9173);
     SUCCESSOR_DOES_NOT_EXIST = lRepository.getErrorCode(9174);
     SUCCESSOR_NOT_SET = lRepository.getErrorCode(9175);
+    NOT_NULL_ANNOTATION_NAME_NOT_SET = lRepository.getErrorCode(9176);
     // Handle all localized strings.
   }
 
