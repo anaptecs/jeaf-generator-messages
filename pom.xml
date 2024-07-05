@@ -26,7 +26,7 @@
 	
 	<properties>
 		<jeaf.x-fun.api.version>1.8.0</jeaf.x-fun.api.version>
-		<maven.jeaf-generator-plugin.version>1.20.2</maven.jeaf-generator-plugin.version>
+		<maven.jeaf-generator-plugin.version>1.22.2</maven.jeaf-generator-plugin.version>
 	</properties>
 
 	<modules>
