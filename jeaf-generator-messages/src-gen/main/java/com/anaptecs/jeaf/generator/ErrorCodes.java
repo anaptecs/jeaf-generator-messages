@@ -511,7 +511,9 @@ public final class ErrorCodes {
   /**
    * JEAF Generator supports to split a model into several OpenAPI specifications. If in such a case one OpenAPI
    * specification refers to the types of another one, then a dependency between OpenAPI specs has to be defined in the
-   * UML model.
+   * UML model. If you want you can disable this check using configuration parameter `disableOpenAPIDependencyChecks`.
+   * However, please be aware that not checking dependencies might lead to inconsistent or incorrect OpenAPI
+   * specifications.
    */
   public static final ErrorCode OPEN_API_SPEC_REFERENCE_MISSING;
 
