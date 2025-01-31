@@ -551,6 +551,12 @@ public final class ErrorCodes {
    * explicitly expects that the name of the annotation that should be used is defined in the Maven configuration.
    */
   public static final ErrorCode NOT_NULL_ANNOTATION_NAME_NOT_SET;
+
+  /**
+   * When modeling parameters of methods in UML it is important that they also have a type. If a type is not defined
+   * then code generation is not possible.
+   */
+  public static final ErrorCode PARAMETER_WITHOUT_TYPE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -650,6 +656,7 @@ public final class ErrorCodes {
     SUCCESSOR_DOES_NOT_EXIST = lRepository.getErrorCode(9174);
     SUCCESSOR_NOT_SET = lRepository.getErrorCode(9175);
     NOT_NULL_ANNOTATION_NAME_NOT_SET = lRepository.getErrorCode(9176);
+    PARAMETER_WITHOUT_TYPE = lRepository.getErrorCode(9177);
     // Handle all localized strings.
   }
 
