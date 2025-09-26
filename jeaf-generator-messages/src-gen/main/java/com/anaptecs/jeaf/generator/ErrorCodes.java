@@ -557,6 +557,12 @@ public final class ErrorCodes {
    * then code generation is not possible.
    */
   public static final ErrorCode PARAMETER_WITHOUT_TYPE;
+
+  /**
+   * JEAF Generator detected that there is a class with a broken template binding. Please make sure that for every
+   * template parameter substitution there also is a actual type defined in the UML model.
+   */
+  public static final ErrorCode BROKEN_TEMPLATE_BINDING;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -657,6 +663,7 @@ public final class ErrorCodes {
     SUCCESSOR_NOT_SET = lRepository.getErrorCode(9175);
     NOT_NULL_ANNOTATION_NAME_NOT_SET = lRepository.getErrorCode(9176);
     PARAMETER_WITHOUT_TYPE = lRepository.getErrorCode(9177);
+    BROKEN_TEMPLATE_BINDING = lRepository.getErrorCode(9178);
     // Handle all localized strings.
   }
 
