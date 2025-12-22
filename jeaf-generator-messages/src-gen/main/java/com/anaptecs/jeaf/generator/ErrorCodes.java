@@ -565,10 +565,18 @@ public final class ErrorCodes {
   public static final ErrorCode BROKEN_TEMPLATE_BINDING;
 
   /**
-   * JEAF Generator detected that there is an optional primitive property without explicit default value in a class. As
-   * this is not supported in Java it does not make sense for classes with stereotype «POJO» or «ServiceObject»
+   * JEAF Generator detected that there is an optional primitive property without explicit default value in a class with
+   * stereotype «POJO» or «ServiceObject». This check was excplitily enabled in your Maven configuration using
+   * configuration parameter "enforceExplicitDefaultValueForOptionalPrimitives".
    */
   public static final ErrorCode PROPERTY_WITH_OPTIONAL_PRIMITIVE;
+
+  /**
+   * JEAF Generator detected that there is an optional primitive parameter without explicit default value in an
+   * operation with stereotype «RESTOperation». This check was excplitily enabled in your Maven configuration using
+   * configuration parameter "enforceExplicitDefaultValueForOptionalPrimitives".
+   */
+  public static final ErrorCode OPERATION_WITH_OPTIONAL_PRIMITIVE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -671,6 +679,7 @@ public final class ErrorCodes {
     PARAMETER_WITHOUT_TYPE = lRepository.getErrorCode(9177);
     BROKEN_TEMPLATE_BINDING = lRepository.getErrorCode(9178);
     PROPERTY_WITH_OPTIONAL_PRIMITIVE = lRepository.getErrorCode(9179);
+    OPERATION_WITH_OPTIONAL_PRIMITIVE = lRepository.getErrorCode(9180);
     // Handle all localized strings.
   }
 
