@@ -563,6 +563,12 @@ public final class ErrorCodes {
    * template parameter substitution there also is a actual type defined in the UML model.
    */
   public static final ErrorCode BROKEN_TEMPLATE_BINDING;
+
+  /**
+   * JEAF Generator detected that there is an optional primitive property without explicit default value in a class. As
+   * this is not supported in Java it does not make sense for classes with stereotype «POJO» or «ServiceObject»
+   */
+  public static final ErrorCode PROPERTY_WITH_OPTIONAL_PRIMITIVE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -664,6 +670,7 @@ public final class ErrorCodes {
     NOT_NULL_ANNOTATION_NAME_NOT_SET = lRepository.getErrorCode(9176);
     PARAMETER_WITHOUT_TYPE = lRepository.getErrorCode(9177);
     BROKEN_TEMPLATE_BINDING = lRepository.getErrorCode(9178);
+    PROPERTY_WITH_OPTIONAL_PRIMITIVE = lRepository.getErrorCode(9179);
     // Handle all localized strings.
   }
 
