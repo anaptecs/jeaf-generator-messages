@@ -577,6 +577,34 @@ public final class ErrorCodes {
    * configuration parameter "enforceExplicitDefaultValueForOptionalPrimitives".
    */
   public static final ErrorCode OPERATION_WITH_OPTIONAL_PRIMITIVE;
+
+  /**
+   * JEAF Generator supports to define depenencies between elements. As this information is used to generate Maven POM
+   * files source and target of such dependencies must be elements with stereotype «MavenProject».
+   */
+  public static final ErrorCode INVALID_SOURCE_OR_TARGET_FOR_MVN_DEPENDENCY;
+
+  /**
+   * JEAF Generator supports to use UML model coordinates from parent POM (direct or indirect). However there the
+   * coordinates of the UML model have to be defined.
+   */
+  public static final ErrorCode NO_MODEL_COORDINATES_IN_PARENT;
+
+  /**
+   * Stereotype «MavenDependency» can only be used if the target Maven project is of archetype "ARTIFACT".
+   */
+  public static final ErrorCode TARGET_PROJECT_HAS_WRONG_ARCHETYPE;
+
+  /**
+   * Tag "serviceTypes" is only applicable for Maven projects with archetype "SERVICE_MODEL".
+   */
+  public static final ErrorCode SERVICE_TYPES_ONLY_APPLICABLE_FOR_SERVICE_MODELS;
+
+  /**
+   * When there is a Maven project dependency in the UML model then the so called module dependency type must match to
+   * the projects archetype.
+   */
+  public static final ErrorCode ARCHETYPE_DO_NOT_MATCH_TO_DEPNDENCY_TYPE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -680,6 +708,11 @@ public final class ErrorCodes {
     BROKEN_TEMPLATE_BINDING = lRepository.getErrorCode(9178);
     PROPERTY_WITH_OPTIONAL_PRIMITIVE = lRepository.getErrorCode(9179);
     OPERATION_WITH_OPTIONAL_PRIMITIVE = lRepository.getErrorCode(9180);
+    INVALID_SOURCE_OR_TARGET_FOR_MVN_DEPENDENCY = lRepository.getErrorCode(9181);
+    NO_MODEL_COORDINATES_IN_PARENT = lRepository.getErrorCode(9182);
+    TARGET_PROJECT_HAS_WRONG_ARCHETYPE = lRepository.getErrorCode(9183);
+    SERVICE_TYPES_ONLY_APPLICABLE_FOR_SERVICE_MODELS = lRepository.getErrorCode(9184);
+    ARCHETYPE_DO_NOT_MATCH_TO_DEPNDENCY_TYPE = lRepository.getErrorCode(9185);
     // Handle all localized strings.
   }
 
