@@ -613,6 +613,13 @@ public final class ErrorCodes {
    * stereotype «NoRESTParam».
    */
   public static final ErrorCode BEAN_PARAM_PROPERTY_WITHOUT_PARAM_TYPE;
+
+  /**
+   * So called compatibility groups can be used to simplify handling of deprecation and breaking changes message. One
+   * part of this is defining compatibility info for a compatibility group. However you can not define more the one
+   * compatibility info for a compatibility group
+   */
+  public static final ErrorCode TOO_MANY_COMPATIBILITY_INFOS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -722,6 +729,7 @@ public final class ErrorCodes {
     SERVICE_TYPES_ONLY_APPLICABLE_FOR_SERVICE_MODELS = lRepository.getErrorCode(9184);
     ARCHETYPE_DO_NOT_MATCH_TO_DEPNDENCY_TYPE = lRepository.getErrorCode(9185);
     BEAN_PARAM_PROPERTY_WITHOUT_PARAM_TYPE = lRepository.getErrorCode(9186);
+    TOO_MANY_COMPATIBILITY_INFOS = lRepository.getErrorCode(9187);
     // Handle all localized strings.
   }
 
