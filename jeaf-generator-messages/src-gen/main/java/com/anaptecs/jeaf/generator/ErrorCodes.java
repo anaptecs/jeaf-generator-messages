@@ -620,6 +620,12 @@ public final class ErrorCodes {
    * compatibility info for a compatibility group
    */
   public static final ErrorCode TOO_MANY_COMPATIBILITY_INFOS;
+
+  /**
+   * It is possible to define the first incompatible version for a version. However, as the name implies, there is only
+   * one first incompatible first version.
+   */
+  public static final ErrorCode TOO_MANY_INCOMPATIBLE_VERSIONS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -730,6 +736,7 @@ public final class ErrorCodes {
     ARCHETYPE_DO_NOT_MATCH_TO_DEPNDENCY_TYPE = lRepository.getErrorCode(9185);
     BEAN_PARAM_PROPERTY_WITHOUT_PARAM_TYPE = lRepository.getErrorCode(9186);
     TOO_MANY_COMPATIBILITY_INFOS = lRepository.getErrorCode(9187);
+    TOO_MANY_INCOMPATIBLE_VERSIONS = lRepository.getErrorCode(9188);
     // Handle all localized strings.
   }
 
