@@ -626,6 +626,18 @@ public final class ErrorCodes {
    * one first incompatible first version.
    */
   public static final ErrorCode TOO_MANY_INCOMPATIBLE_VERSIONS;
+
+  /**
+   * Using stereotype «EnumSubset» it is possible to limit the allowed literals for a property. This can be achieved by
+   * either using a positive or an exclusion list but not both or none.
+   */
+  public static final ErrorCode ENUM_SUBSET_INVALID;
+
+  /**
+   * Using stereotype «EnumSubset» it is possible to limit the allowed literals for a property. This can be achieved by
+   * either using a positive or an exclusion list but not both or none.
+   */
+  public static final ErrorCode ENUM_SUBSET_NOT_DEFINED;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -737,6 +749,8 @@ public final class ErrorCodes {
     BEAN_PARAM_PROPERTY_WITHOUT_PARAM_TYPE = lRepository.getErrorCode(9186);
     TOO_MANY_COMPATIBILITY_INFOS = lRepository.getErrorCode(9187);
     TOO_MANY_INCOMPATIBLE_VERSIONS = lRepository.getErrorCode(9188);
+    ENUM_SUBSET_INVALID = lRepository.getErrorCode(9189);
+    ENUM_SUBSET_NOT_DEFINED = lRepository.getErrorCode(9190);
     // Handle all localized strings.
   }
 
