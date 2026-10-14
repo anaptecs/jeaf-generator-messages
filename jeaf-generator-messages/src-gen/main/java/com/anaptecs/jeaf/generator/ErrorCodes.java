@@ -638,6 +638,17 @@ public final class ErrorCodes {
    * either using a positive or an exclusion list but not both or none.
    */
   public static final ErrorCode ENUM_SUBSET_NOT_DEFINED;
+
+  /**
+   * Model elements can be associated with «CompatibilityGroup» elements. However, at least at the moment more than one
+   * compatibioity group is not supported.
+   */
+  public static final ErrorCode MORE_THAN_ONE_COMPATIBILIY_GROUP;
+
+  /**
+   * «CompatibilityGroup» elements always must have exactly one «CompatibilityInfo».
+   */
+  public static final ErrorCode COMPATIBILITY_GROUP_HAS_NO_INFO;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -751,6 +762,8 @@ public final class ErrorCodes {
     TOO_MANY_INCOMPATIBLE_VERSIONS = lRepository.getErrorCode(9188);
     ENUM_SUBSET_INVALID = lRepository.getErrorCode(9189);
     ENUM_SUBSET_NOT_DEFINED = lRepository.getErrorCode(9190);
+    MORE_THAN_ONE_COMPATIBILIY_GROUP = lRepository.getErrorCode(9191);
+    COMPATIBILITY_GROUP_HAS_NO_INFO = lRepository.getErrorCode(9192);
     // Handle all localized strings.
   }
 
