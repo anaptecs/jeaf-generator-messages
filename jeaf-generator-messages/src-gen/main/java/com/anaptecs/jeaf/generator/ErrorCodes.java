@@ -649,6 +649,16 @@ public final class ErrorCodes {
    * «CompatibilityGroup» elements always must have exactly one «CompatibilityInfo».
    */
   public static final ErrorCode COMPATIBILITY_GROUP_HAS_NO_INFO;
+
+  /**
+   * Multiple inheritance is not supported by Java or OpenAPI.
+   */
+  public static final ErrorCode MULTIPLE_INHERITANCE;
+
+  /**
+   * JEAF Generator currently does not support inheritance in combination with Java Generics
+   */
+  public static final ErrorCode GENERIC_INHERITANCE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -764,6 +774,8 @@ public final class ErrorCodes {
     ENUM_SUBSET_NOT_DEFINED = lRepository.getErrorCode(9190);
     MORE_THAN_ONE_COMPATIBILIY_GROUP = lRepository.getErrorCode(9191);
     COMPATIBILITY_GROUP_HAS_NO_INFO = lRepository.getErrorCode(9192);
+    MULTIPLE_INHERITANCE = lRepository.getErrorCode(9193);
+    GENERIC_INHERITANCE = lRepository.getErrorCode(9194);
     // Handle all localized strings.
   }
 
