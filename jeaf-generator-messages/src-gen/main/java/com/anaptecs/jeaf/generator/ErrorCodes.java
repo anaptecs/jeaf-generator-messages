@@ -659,6 +659,18 @@ public final class ErrorCodes {
    * JEAF Generator currently does not support inheritance in combination with Java Generics
    */
   public static final ErrorCode GENERIC_INHERITANCE;
+
+  /**
+   * When using JEAF Generator it is possible to define an OpenAPI namespace. OpenAPI itself does not provide a built-in
+   * concept of namespaces. For a given namespace, JEAF Generator ensures that all schema element names are unique
+   * within that scope.
+   *
+   * This is particularly useful when the generated OpenAPI specifications are consumed by code generation tools other
+   * than the JEAF Generator. Many code generators do not support assigning separate packages when working with multiple
+   * OpenAPI specifications. In such scenarios, it is essential that all schema elements have unique names to avoid
+   * naming conflicts during code generation.
+   */
+  public static final ErrorCode DUPLICATED_NAME_IN_OPENAPI_NAMESPACE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -776,6 +788,7 @@ public final class ErrorCodes {
     COMPATIBILITY_GROUP_HAS_NO_INFO = lRepository.getErrorCode(9192);
     MULTIPLE_INHERITANCE = lRepository.getErrorCode(9193);
     GENERIC_INHERITANCE = lRepository.getErrorCode(9194);
+    DUPLICATED_NAME_IN_OPENAPI_NAMESPACE = lRepository.getErrorCode(9195);
     // Handle all localized strings.
   }
 
