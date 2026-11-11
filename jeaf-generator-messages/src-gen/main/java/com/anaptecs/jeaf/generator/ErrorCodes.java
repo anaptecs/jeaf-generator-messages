@@ -671,6 +671,15 @@ public final class ErrorCodes {
    * naming conflicts during code generation.
    */
   public static final ErrorCode DUPLICATED_NAME_IN_OPENAPI_NAMESPACE;
+
+  /**
+   * JEAF Generator supports to split a model into several OpenAPI specifications. If in such a case one OpenAPI
+   * specification refers to the types of another one, then a dependency between OpenAPI specs has to be defined in the
+   * UML model. If you want you can disable this check using configuration parameter `disableOpenAPIDependencyChecks`.
+   * However, please be aware that not checking dependencies might lead to inconsistent or incorrect OpenAPI
+   * specifications.
+   */
+  public static final ErrorCode OPEN_API_SPEC_REFERENCE_MISSING_FOR_INHERITANCE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -789,6 +798,7 @@ public final class ErrorCodes {
     MULTIPLE_INHERITANCE = lRepository.getErrorCode(9193);
     GENERIC_INHERITANCE = lRepository.getErrorCode(9194);
     DUPLICATED_NAME_IN_OPENAPI_NAMESPACE = lRepository.getErrorCode(9195);
+    OPEN_API_SPEC_REFERENCE_MISSING_FOR_INHERITANCE = lRepository.getErrorCode(9196);
     // Handle all localized strings.
   }
 
