@@ -525,7 +525,7 @@ public final class ErrorCodes {
   public static final ErrorCode ORPHANED_OPEN_API_TYPE_USED;
 
   /**
-   * JEAF Generator support developers with special code generation for backward compatibility for Java properties. Due
+   * JEAF Generator supports developers with special code generation for backward compatibility for Java properties. Due
    * to that tagged value ''generateBackwardCompatibility'' and ''successorName'' of stereotype «JEAFDeprecated» can
    * only be used for properties.
    */
@@ -680,6 +680,19 @@ public final class ErrorCodes {
    * specifications.
    */
   public static final ErrorCode OPEN_API_SPEC_REFERENCE_MISSING_FOR_INHERITANCE;
+
+  /**
+   * Links from associations to compatibility groups are not supported. Instead, the property of the association end
+   * must define the dependency on the compatibility group.
+   */
+  public static final ErrorCode COMPATIBILITY_GROUP_REFERENCED_BY_ASSOCIATION;
+
+  /**
+   * JEAF Generator supports developers with special code generation for backward compatibility of Java properties. For
+   * this purpose, the successor of an existing property can be defined. The deprecated property and its successor must
+   * have the same type and multiplicity.
+   */
+  public static final ErrorCode DEPRECATED_PROPERTY_AND_SUCCESSOR_DO_NOT_HAVE_SAME_TYPE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -799,6 +812,8 @@ public final class ErrorCodes {
     GENERIC_INHERITANCE = lRepository.getErrorCode(9194);
     DUPLICATED_NAME_IN_OPENAPI_NAMESPACE = lRepository.getErrorCode(9195);
     OPEN_API_SPEC_REFERENCE_MISSING_FOR_INHERITANCE = lRepository.getErrorCode(9196);
+    COMPATIBILITY_GROUP_REFERENCED_BY_ASSOCIATION = lRepository.getErrorCode(9197);
+    DEPRECATED_PROPERTY_AND_SUCCESSOR_DO_NOT_HAVE_SAME_TYPE = lRepository.getErrorCode(9198);
     // Handle all localized strings.
   }
 
