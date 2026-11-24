@@ -693,6 +693,13 @@ public final class ErrorCodes {
    * have the same type and multiplicity.
    */
   public static final ErrorCode DEPRECATED_PROPERTY_AND_SUCCESSOR_DO_NOT_HAVE_SAME_TYPE;
+
+  /**
+   * Each release of the JEAF Meta Model (JMM) defines the minimum version of JEAF Generator that supports it. Your UML
+   * model uses a JMM version that is newer than the JEAF Generator version you are using. Please upgrade JEAF Generator
+   * to the required version or higher.
+   */
+  public static final ErrorCode INCOMPATIBLE_GENERATOR_VERSION;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -814,6 +821,7 @@ public final class ErrorCodes {
     OPEN_API_SPEC_REFERENCE_MISSING_FOR_INHERITANCE = lRepository.getErrorCode(9196);
     COMPATIBILITY_GROUP_REFERENCED_BY_ASSOCIATION = lRepository.getErrorCode(9197);
     DEPRECATED_PROPERTY_AND_SUCCESSOR_DO_NOT_HAVE_SAME_TYPE = lRepository.getErrorCode(9198);
+    INCOMPATIBLE_GENERATOR_VERSION = lRepository.getErrorCode(9199);
     // Handle all localized strings.
   }
 
