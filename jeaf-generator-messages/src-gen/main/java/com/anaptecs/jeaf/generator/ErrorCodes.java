@@ -700,6 +700,112 @@ public final class ErrorCodes {
    * to the required version or higher.
    */
   public static final ErrorCode INCOMPATIBLE_GENERATOR_VERSION;
+
+  /**
+   * Deprecated types whose compatibility group does not belong to the OpenAPI validation group are not part of OpenAPI
+   * specifications. If an element of an OpenAPI specification still references such a type, the specification would
+   * contain an unresolved reference.
+   */
+  public static final ErrorCode TYPE_EXCLUDED_FROM_OPENAPI;
+
+  /**
+   * The path of the operations of a REST resource is either defined by tagged value `path` or by `operationPathPrefix`.
+   * Both must not be set at the same time.
+   */
+  public static final ErrorCode REST_RESOURCE_PATH_AND_PREFIX;
+
+  /**
+   * Stereotypes «OpenAPIType», «OpenAPIDataType» and «BeanParam» define different kinds of types. A class can only be
+   * one of them.
+   */
+  public static final ErrorCode CONFLICTING_OPENAPI_STEREOTYPES;
+
+  /**
+   * Stereotypes «PathParam», «QueryParam», «HeaderParam» and «CookieParam» are only evaluated for parameters of a
+   * «RESTOperation» and properties of a «BeanParam». On other elements they have no effect.
+   */
+  public static final ErrorCode REST_PARAM_NOT_APPLICABLE;
+
+  /**
+   * REST operations are generated based on the JEAF service they belong to. Therefore the interface that owns a
+   * «RESTOperation» has to be a «JEAFService».
+   */
+  public static final ErrorCode REST_OPERATION_WITHOUT_SERVICE;
+
+  /**
+   * REST resources are generated based on the JEAF service they represent. Therefore each «RESTResource» also has to be
+   * marked as «JEAFService».
+   */
+  public static final ErrorCode REST_RESOURCE_WITHOUT_SERVICE;
+
+  /**
+   * A «BeanParam» groups path, query, header or cookie parameters of REST operations. If none of its properties is such
+   * a parameter, the bean parameter has no effect on the REST interface.
+   */
+  public static final ErrorCode BEAN_PARAM_WITHOUT_REST_PARAMS;
+
+  /**
+   * Path, query, header and cookie parameters are transferred as strings. Therefore only basic types, enumerations,
+   * «OpenAPIDataType» and composite data types can be used as their type.
+   */
+  public static final ErrorCode UNSUPPORTED_REST_PARAM_TYPE;
+
+  /**
+   * JEAF Generator only supports default values for single-valued properties.
+   */
+  public static final ErrorCode DEFAULT_VALUE_FOR_MULTIVALUED_PROPERTY;
+
+  /**
+   * The default value of a property has to match its type: numeric types require a valid number, booleans `true` or
+   * `false` and enumerations the name of one of their literals. Otherwise invalid code would be generated.
+   */
+  public static final ErrorCode INVALID_DEFAULT_VALUE;
+
+  /**
+   * Stereotype «EnumSubset» restricts the allowed literals of an enumeration. It can only be applied to properties and
+   * parameters whose type is an enumeration.
+   */
+  public static final ErrorCode ENUM_SUBSET_WITHOUT_ENUMERATION;
+
+  /**
+   * An abstract class can not be instantiated and a final class (`isLeaf`) can not be extended. Therefore a class
+   * should not be both.
+   */
+  public static final ErrorCode ABSTRACT_AND_FINAL_CLASS;
+
+  /**
+   * Operations without return value have to use type `void` of the MagicDraw profile (`MagicDraw
+   * Profile.datatypes.void`). Other types named `void` are not recognized and would lead to invalid code.
+   */
+  public static final ErrorCode INVALID_VOID_TYPE;
+
+  /**
+   * The identifiers of validation groups have to be unique within a UML model.
+   */
+  public static final ErrorCode VALIDATION_GROUP_IDENTIFIER_NOT_UNIQUE;
+
+  /**
+   * Only one validation group can be used for OpenAPI specifications. Therefore tagged value `openAPIValidationGroup`
+   * may only be set for one «ValidationGroup».
+   */
+  public static final ErrorCode MULTIPLE_OPENAPI_VALIDATION_GROUPS;
+
+  /**
+   * Stereotype «FirstIncompatibleVersion» defines the first incompatible version between two «CompatibilityInfo»
+   * elements. On other dependencies it has no effect.
+   */
+  public static final ErrorCode INVALID_FIRST_INCOMPATIBLE_VERSION;
+
+  /**
+   * If a literal of an enumeration defines a slot for an attribute, then the slot also has to define a value.
+   */
+  public static final ErrorCode ENUM_LITERAL_SLOT_WITHOUT_VALUE;
+
+  /**
+   * All types and parameters that are used by an OpenAPI specification have to be resolvable while it is generated.
+   * Otherwise the generated OpenAPI specification would be incomplete.
+   */
+  public static final ErrorCode UNRESOLVED_OPENAPI_REFERENCE;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -822,6 +928,24 @@ public final class ErrorCodes {
     COMPATIBILITY_GROUP_REFERENCED_BY_ASSOCIATION = lRepository.getErrorCode(9197);
     DEPRECATED_PROPERTY_AND_SUCCESSOR_DO_NOT_HAVE_SAME_TYPE = lRepository.getErrorCode(9198);
     INCOMPATIBLE_GENERATOR_VERSION = lRepository.getErrorCode(9199);
+    TYPE_EXCLUDED_FROM_OPENAPI = lRepository.getErrorCode(9200);
+    REST_RESOURCE_PATH_AND_PREFIX = lRepository.getErrorCode(9201);
+    CONFLICTING_OPENAPI_STEREOTYPES = lRepository.getErrorCode(9202);
+    REST_PARAM_NOT_APPLICABLE = lRepository.getErrorCode(9203);
+    REST_OPERATION_WITHOUT_SERVICE = lRepository.getErrorCode(9204);
+    REST_RESOURCE_WITHOUT_SERVICE = lRepository.getErrorCode(9205);
+    BEAN_PARAM_WITHOUT_REST_PARAMS = lRepository.getErrorCode(9206);
+    UNSUPPORTED_REST_PARAM_TYPE = lRepository.getErrorCode(9207);
+    DEFAULT_VALUE_FOR_MULTIVALUED_PROPERTY = lRepository.getErrorCode(9208);
+    INVALID_DEFAULT_VALUE = lRepository.getErrorCode(9209);
+    ENUM_SUBSET_WITHOUT_ENUMERATION = lRepository.getErrorCode(9210);
+    ABSTRACT_AND_FINAL_CLASS = lRepository.getErrorCode(9211);
+    INVALID_VOID_TYPE = lRepository.getErrorCode(9212);
+    VALIDATION_GROUP_IDENTIFIER_NOT_UNIQUE = lRepository.getErrorCode(9213);
+    MULTIPLE_OPENAPI_VALIDATION_GROUPS = lRepository.getErrorCode(9214);
+    INVALID_FIRST_INCOMPATIBLE_VERSION = lRepository.getErrorCode(9215);
+    ENUM_LITERAL_SLOT_WITHOUT_VALUE = lRepository.getErrorCode(9216);
+    UNRESOLVED_OPENAPI_REFERENCE = lRepository.getErrorCode(9217);
     // Handle all localized strings.
   }
 
