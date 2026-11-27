@@ -813,6 +813,13 @@ public final class ErrorCodes {
    * process the specifications one after the other. Consider to move shared types into a separate specification.
    */
   public static final ErrorCode OPENAPI_SPEC_CIRCULAR_DEPENDENCY;
+
+  /**
+   * A package belongs to an OpenAPI specification through a dependency from the «OpenAPI3Specification» to the package.
+   * If several OpenAPI specifications have a dependency to the same package, it is undefined in which specification its
+   * types are generated. Keep the dependency of only one OpenAPI specification to the package.
+   */
+  public static final ErrorCode PACKAGE_IN_SEVERAL_OPENAPI_SPECS;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -954,6 +961,7 @@ public final class ErrorCodes {
     ENUM_LITERAL_SLOT_WITHOUT_VALUE = lRepository.getErrorCode(9216);
     UNRESOLVED_OPENAPI_REFERENCE = lRepository.getErrorCode(9217);
     OPENAPI_SPEC_CIRCULAR_DEPENDENCY = lRepository.getErrorCode(9218);
+    PACKAGE_IN_SEVERAL_OPENAPI_SPECS = lRepository.getErrorCode(9219);
     // Handle all localized strings.
   }
 
