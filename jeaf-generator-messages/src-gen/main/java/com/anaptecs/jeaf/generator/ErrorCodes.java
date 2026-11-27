@@ -806,6 +806,13 @@ public final class ErrorCodes {
    * Otherwise the generated OpenAPI specification would be incomplete.
    */
   public static final ErrorCode UNRESOLVED_OPENAPI_REFERENCE;
+
+  /**
+   * The dependencies between OpenAPI specifications («OpenAPISpecReference») are circular. JEAF Generator supports
+   * this, but circular dependencies make OpenAPI specifications harder to understand and to use, e.g. for tools that
+   * process the specifications one after the other. Consider to move shared types into a separate specification.
+   */
+  public static final ErrorCode OPENAPI_SPEC_CIRCULAR_DEPENDENCY;
   /**
    * Static initializer contains initialization for all generated constants.
    */
@@ -946,6 +953,7 @@ public final class ErrorCodes {
     INVALID_FIRST_INCOMPATIBLE_VERSION = lRepository.getErrorCode(9215);
     ENUM_LITERAL_SLOT_WITHOUT_VALUE = lRepository.getErrorCode(9216);
     UNRESOLVED_OPENAPI_REFERENCE = lRepository.getErrorCode(9217);
+    OPENAPI_SPEC_CIRCULAR_DEPENDENCY = lRepository.getErrorCode(9218);
     // Handle all localized strings.
   }
 
